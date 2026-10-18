@@ -27,7 +27,6 @@ config/feature_selection/  frozen A-GRASPQ-FS search artifacts
 results/                   released experiment outputs
 figures/scripts/           reproducible plotting programs
 figures/output/            publication figures
-tests/                     automated tests
 ```
 
 ## Environment
@@ -38,7 +37,7 @@ Python 3.11 or newer is required.
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -e ".[test]"
+python -m pip install -e .
 ```
 
 Pinned direct dependency versions for the released results are listed in `requirements-lock.txt`.
@@ -98,9 +97,3 @@ python figures/scripts/fig_lycos_continual_learning.py
 ```
 
 Each script generates independent PDF and PNG panels under `figures/output/`.
-
-## Tests
-
-```powershell
-python -m pytest
-```
