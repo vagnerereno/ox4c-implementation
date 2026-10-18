@@ -1,0 +1,123 @@
+{
+  "source_file": "data/qut_dv25/QUT-DV25.csv",
+  "sha256": "1c3c480e05066973c5dd748c658ca40d35339e0fe6af8c62b01ad12aa3beddd8",
+  "rows": 14271,
+  "class_counts": {
+    "0": 7144,
+    "1": 7127
+  },
+  "target": "Labels",
+  "sample_id": "Package_Name",
+  "split_policy": "stratified-group 60/15/10/15; repeated entities kept in one partition; deterministic within-partition shuffle",
+  "split_sizes": {
+    "train": 8565,
+    "calibration": 2140,
+    "validation": 1426,
+    "test": 2140
+  },
+  "split_class_counts": {
+    "train": {
+      "0": 4288,
+      "1": 4277
+    },
+    "calibration": {
+      "0": 1071,
+      "1": 1069
+    },
+    "validation": {
+      "0": 714,
+      "1": 712
+    },
+    "test": {
+      "0": 1071,
+      "1": 1069
+    }
+  },
+  "leakage_audit": {
+    "rows_with_repeated_raw_features": 86,
+    "unique_sample_ids": 14271,
+    "repeated_sample_ids": 0,
+    "group_source": "raw_feature_fingerprint",
+    "cross_partition_group_overlap": {
+      "train__calibration": 0,
+      "train__validation": 0,
+      "train__test": 0,
+      "calibration__validation": 0,
+      "calibration__test": 0,
+      "validation__test": 0
+    }
+  },
+  "categorical_encoding": "training-frequency encoding",
+  "categorical_columns": [
+    "Direct_Dependencies",
+    "File_Access_Processes",
+    "Indirect_Dependencies",
+    "Pattern_1",
+    "Pattern_10",
+    "Pattern_2",
+    "Pattern_3",
+    "Pattern_4",
+    "Pattern_5",
+    "Pattern_6",
+    "Pattern_7",
+    "Pattern_8",
+    "Pattern_9",
+    "Read_Data_Transfer",
+    "Read_Processes",
+    "State_Transition",
+    "Total_Dependencies",
+    "Write_Data_Transfer",
+    "Write_Processes"
+  ],
+  "feature_views": {
+    "file_io": [
+      "Read_Processes",
+      "Write_Processes",
+      "Read_Data_Transfer",
+      "Write_Data_Transfer",
+      "File_Access_Processes"
+    ],
+    "dependencies": [
+      "Total_Dependencies",
+      "Direct_Dependencies",
+      "Indirect_Dependencies"
+    ],
+    "directory_access": [
+      "Root_DIR_Access",
+      "Temp_DIR_Access",
+      "Home_DIR_Access",
+      "User_DIR_Access",
+      "Sys_DIR_Access",
+      "Etc_DIR_Access",
+      "Other_DIR_Access"
+    ],
+    "network": [
+      "Network_Operations",
+      "State_Transition",
+      "Local_IPs_Access",
+      "Remote_IPs_Access",
+      "Local_Port_Access",
+      "Remote_Port_Access"
+    ],
+    "system_calls": [
+      "IO_Operations",
+      "File_Operations",
+      "Network_Operations",
+      "Time_Operations",
+      "Security_Operations",
+      "Process_Operations"
+    ],
+    "behavior_patterns": [
+      "Pattern_1",
+      "Pattern_2",
+      "Pattern_3",
+      "Pattern_4",
+      "Pattern_5",
+      "Pattern_6",
+      "Pattern_7",
+      "Pattern_8",
+      "Pattern_9",
+      "Pattern_10"
+    ]
+  }
+}

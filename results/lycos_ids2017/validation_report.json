@@ -1,0 +1,85 @@
+{
+  "status": "passed",
+  "protocol": "lycos-prequential-delayed-supervision-and-retention-v1",
+  "checks": {
+    "all_configuration_delay_combinations": {
+      "passed": true,
+      "evidence": {
+        "expected": 9,
+        "observed": 9
+      }
+    },
+    "three_policy_rows_for_every_batch": {
+      "passed": true,
+      "evidence": {
+        "expected_rows": 810,
+        "observed_rows": 810
+      }
+    },
+    "policy_inputs_identical_within_batch": {
+      "passed": true,
+      "evidence": "events and attacks agree across policies for every batch"
+    },
+    "feedback_released_after_exact_configured_delay": {
+      "passed": true,
+      "evidence": {
+        "minimum_observed_delay": 1,
+        "maximum_observed_delay": 5
+      }
+    },
+    "replay_version_has_no_early_feedback": {
+      "passed": true,
+      "evidence": "prediction at batch t uses only labels released before batch t"
+    },
+    "frozen_model_never_changes": {
+      "passed": true,
+      "evidence": "all frozen predictions use version 1"
+    },
+    "aggregate_metrics_reproduce_from_batch_confusions": {
+      "passed": true,
+      "evidence": {
+        "maximum_absolute_difference": 1.6653345369377348e-16
+      }
+    },
+    "retention_evaluated_after_every_stream_day": {
+      "passed": true,
+      "evidence": {
+        "expected_rows": 81,
+        "observed_rows": 81
+      }
+    },
+    "family_retention_contains_no_duplicate_keys": {
+      "passed": true,
+      "evidence": {
+        "rows": 810
+      }
+    },
+    "batch_key_fields_complete": {
+      "passed": true,
+      "evidence": {
+        "rows": 810,
+        "key_columns": [
+          "configuration",
+          "label_delay_batches",
+          "global_batch",
+          "policy",
+          "model_version",
+          "events",
+          "tn",
+          "fp",
+          "fn",
+          "tp",
+          "f1",
+          "mcc"
+        ]
+      }
+    }
+  },
+  "output_row_counts": {
+    "batch_results": 810,
+    "update_results": 492,
+    "aggregate_results": 27,
+    "retention_results": 81,
+    "retention_by_family": 810
+  }
+}

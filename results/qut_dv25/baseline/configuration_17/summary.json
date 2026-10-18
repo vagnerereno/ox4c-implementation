@@ -1,0 +1,274 @@
+{
+  "protocol": "ox4c-conflict-driven-v1",
+  "domain": "software_supply_chain_security",
+  "events": 2140,
+  "experiment": {
+    "dataset": "qut",
+    "profile": "baseline",
+    "configuration": 17,
+    "configuration_role": "grouped_configuration",
+    "data_path": "data/qut_dv25/QUT-DV25.csv",
+    "event_limit": null,
+    "selection_cache": null,
+    "continuous_learning_enabled": false,
+    "runtime_seconds": 12.609670799982268
+  },
+  "frozen_metrics": {
+    "tn": 1054,
+    "fp": 17,
+    "fn": 18,
+    "tp": 1051,
+    "accuracy": 0.9836448598130841,
+    "balanced_accuracy": 0.9836444088081131,
+    "precision": 0.9840823970037453,
+    "recall": 0.9831618334892422,
+    "specificity": 0.9841269841269841,
+    "false_positive_rate": 0.015873015873015872,
+    "f1": 0.9836218998596162,
+    "mcc": 0.9672900849210959
+  },
+  "local_metrics": {
+    "tn": 1054,
+    "fp": 17,
+    "fn": 18,
+    "tp": 1051,
+    "accuracy": 0.9836448598130841,
+    "balanced_accuracy": 0.9836444088081131,
+    "precision": 0.9840823970037453,
+    "recall": 0.9831618334892422,
+    "specificity": 0.9841269841269841,
+    "false_positive_rate": 0.015873015873015872,
+    "f1": 0.9836218998596162,
+    "mcc": 0.9672900849210959
+  },
+  "final_metrics": {
+    "tn": 1054,
+    "fp": 17,
+    "fn": 18,
+    "tp": 1051,
+    "accuracy": 0.9836448598130841,
+    "balanced_accuracy": 0.9836444088081131,
+    "precision": 0.9840823970037453,
+    "recall": 0.9831618334892422,
+    "specificity": 0.9841269841269841,
+    "false_positive_rate": 0.015873015873015872,
+    "f1": 0.9836218998596162,
+    "mcc": 0.9672900849210959
+  },
+  "features": {
+    "algorithm": "none",
+    "selected": [
+      "Read_Processes",
+      "Write_Processes",
+      "Read_Data_Transfer",
+      "Write_Data_Transfer",
+      "File_Access_Processes",
+      "Total_Dependencies",
+      "Direct_Dependencies",
+      "Indirect_Dependencies",
+      "Root_DIR_Access",
+      "Temp_DIR_Access",
+      "Home_DIR_Access",
+      "User_DIR_Access",
+      "Sys_DIR_Access",
+      "Etc_DIR_Access",
+      "Other_DIR_Access",
+      "Pattern_1",
+      "Pattern_2",
+      "Pattern_3",
+      "Pattern_4",
+      "Pattern_5",
+      "Pattern_6",
+      "Pattern_7",
+      "Pattern_8",
+      "Pattern_9",
+      "Pattern_10",
+      "IO_Operations",
+      "File_Operations",
+      "Network_Operations",
+      "Time_Operations",
+      "Security_Operations",
+      "Process_Operations",
+      "State_Transition",
+      "Local_IPs_Access",
+      "Remote_IPs_Access",
+      "Local_Port_Access",
+      "Remote_Port_Access"
+    ],
+    "selected_count": 36,
+    "available_count": 36,
+    "runtime_seconds": 1.8199963960796595e-05,
+    "metadata": {},
+    "candidate_count": 36,
+    "deployment_accepted": true
+  },
+  "collaboration": {
+    "conflicts": 0,
+    "primary_negative_conflicts": 0,
+    "primary_positive_conflicts": 0,
+    "primary_false_negatives": 18,
+    "primary_false_negatives_with_conflict": 0,
+    "primary_false_positives": 17,
+    "primary_false_positives_with_conflict": 0,
+    "authorized_interventions": 0,
+    "changed_decisions": 0,
+    "corrections": 0,
+    "harms": 0,
+    "net_corrections": 0,
+    "decision_sources": {
+      "random_forest": 2140
+    },
+    "competence": {
+      "primary_classifier": "random_forest",
+      "classifiers": [
+        "random_forest"
+      ],
+      "consensus": "calibration_selected_vote",
+      "competence": {
+        "random_forest": {
+          "classifier": "random_forest",
+          "global_mcc": 0.9635722126079208,
+          "predictive_value": {
+            "0": 0.9849624060150376,
+            "1": 0.9786245353159851
+          },
+          "class_recall": {
+            "0": 0.9785247432306255,
+            "1": 0.9850327408793265
+          }
+        }
+      },
+      "conflict_rule": "request counsel when predicted labels disagree",
+      "resolution_rule": "calibration-selected minimum attack votes; select the most reliable voter for the consensus label",
+      "activation": {
+        "rule": "select the voting rule on calibration MCC and authorize it only when calibration MCC improves",
+        "reliability_definition": "P(true label = c | classifier predicts c)",
+        "consensus": "calibration_selected_vote",
+        "vote_candidates": [
+          {
+            "minimum_attack_votes": 1,
+            "mcc": 0.9635722126079208,
+            "f1": 0.9818181818181818,
+            "recall": 0.9850327408793265,
+            "tn": 1048,
+            "fp": 23,
+            "fn": 16,
+            "tp": 1053
+          }
+        ],
+        "selected_minimum_attack_votes": 1,
+        "primary_metrics": {
+          "mcc": 0.9635722126079208,
+          "f1": 0.9818181818181818,
+          "recall": 0.9850327408793265,
+          "tn": 1048,
+          "fp": 23,
+          "fn": 16,
+          "tp": 1053
+        },
+        "resolved_metrics": {
+          "mcc": 0.9635722126079208,
+          "f1": 0.9818181818181818,
+          "recall": 0.9850327408793265,
+          "tn": 1048,
+          "fp": 23,
+          "fn": 16,
+          "tp": 1053
+        },
+        "primary_mcc": 0.9635722126079208,
+        "resolved_mcc": 0.9635722126079208,
+        "mcc_gain": 0.0,
+        "minimum_mcc_gain": 0.0,
+        "observed_conflicts": 0,
+        "primary_negative_conflicts": 0,
+        "primary_positive_conflicts": 0,
+        "primary_false_negatives_with_conflict": 0,
+        "primary_false_positives_with_conflict": 0,
+        "changed_decisions": 0,
+        "authorized": false
+      }
+    }
+  },
+  "learning": {
+    "enabled": false,
+    "attempts": 0,
+    "promotions": 0,
+    "final_primary_version": 1,
+    "pending_labels": 0,
+    "promotion_rule": "candidate validation MCC > current validation MCC"
+  },
+  "compact_model": null,
+  "technical_conformance": null,
+  "performance": {
+    "timings": {
+      "feature_selection": {
+        "count": 1,
+        "mean_ms": 0.026900030206888914,
+        "p50_ms": 0.026900030206888914,
+        "p95_ms": 0.026900030206888914,
+        "p99_ms": 0.026900030206888914,
+        "max_ms": 0.026900030206888914,
+        "total_ms": 0.026900030206888914
+      },
+      "primary_training": {
+        "count": 1,
+        "mean_ms": 308.892700006254,
+        "p50_ms": 308.892700006254,
+        "p95_ms": 308.892700006254,
+        "p99_ms": 308.892700006254,
+        "max_ms": 308.892700006254,
+        "total_ms": 308.892700006254
+      },
+      "primary_inference": {
+        "count": 2140,
+        "mean_ms": 5.483300139813109,
+        "p50_ms": 5.338600021786988,
+        "p95_ms": 6.149149965494871,
+        "p99_ms": 8.859158016275638,
+        "max_ms": 29.22010002657771,
+        "total_ms": 11734.262299200054
+      },
+      "decision_availability": {
+        "count": 2140,
+        "mean_ms": 5.487860092718076,
+        "p50_ms": 5.342849995940924,
+        "p95_ms": 6.153929998981766,
+        "p99_ms": 8.866296976921172,
+        "max_ms": 29.224999947473407,
+        "total_ms": 11744.020598416682
+      },
+      "audit_completion": {
+        "count": 2140,
+        "mean_ms": 0.05867537423842108,
+        "p50_ms": 0.05245002103038132,
+        "p95_ms": 0.07931496365927158,
+        "p99_ms": 0.18415696686134297,
+        "max_ms": 0.6089999806135893,
+        "total_ms": 125.56530087022111
+      },
+      "pipeline_completion": {
+        "count": 2140,
+        "mean_ms": 5.553976448294141,
+        "p50_ms": 5.405799980508164,
+        "p95_ms": 6.234739974024706,
+        "p99_ms": 8.990153975901219,
+        "max_ms": 29.321599984541535,
+        "total_ms": 11885.509599349461
+      },
+      "stream_wall": {
+        "count": 1,
+        "mean_ms": 12136.245200003032,
+        "p50_ms": 12136.245200003032,
+        "p95_ms": 12136.245200003032,
+        "p99_ms": 12136.245200003032,
+        "max_ms": 12136.245200003032,
+        "total_ms": 12136.245200003032
+      }
+    },
+    "counters": {
+      "feedback_pending_at_stream_end": 0,
+      "stream_events": 2140
+    },
+    "throughput_events_per_second": 176.33130879717768
+  }
+}

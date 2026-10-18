@@ -1,0 +1,59 @@
+{
+  "policy_id": "ox4c-technical-conformance-v1",
+  "allowed": true,
+  "controls": [
+    {
+      "control": "required_provenance",
+      "passed": true,
+      "evidence": {
+        "required": [
+          "source_file",
+          "sha256",
+          "target",
+          "split_policy",
+          "split_sizes"
+        ],
+        "missing": []
+      }
+    },
+    {
+      "control": "model_version_evidence",
+      "passed": true,
+      "evidence": {
+        "name": "random_forest",
+        "version": 1,
+        "feature_count": 36
+      }
+    },
+    {
+      "control": "audit_record_capability",
+      "passed": true,
+      "evidence": {
+        "available": true
+      }
+    },
+    {
+      "control": "explanation_evidence_capability",
+      "passed": true,
+      "evidence": {
+        "available": true
+      }
+    },
+    {
+      "control": "feature_deny_rules",
+      "passed": true,
+      "evidence": {
+        "denied_features_present": []
+      }
+    },
+    {
+      "control": "feature_allow_rules",
+      "passed": true,
+      "evidence": {
+        "allowlist_active": false,
+        "features_outside_allowlist": []
+      }
+    }
+  ],
+  "violations": []
+}

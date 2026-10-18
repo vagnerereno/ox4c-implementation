@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.tmp/
+.coverage
+htmlcov/
+
+# Environments and editors
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Local data and generated runs
+data/**/*
+!data/**/.gitkeep
+artifacts/
+*.joblib
+*.sqlite3
+
+# Operating systems
+.DS_Store
+Thumbs.db

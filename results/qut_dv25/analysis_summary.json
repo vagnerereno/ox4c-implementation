@@ -1,0 +1,81 @@
+{
+  "protocol": "qut-ox4c-nontemporal-confirmatory-v1",
+  "configurations": [
+    17,
+    42,
+    73
+  ],
+  "profile_aggregate": [
+    {
+      "profile": "baseline",
+      "configurations": 3,
+      "f1_mean": 0.9825251324646006,
+      "f1_sd": 0.004590167629315117,
+      "mcc_mean": 0.9651176426124097,
+      "mcc_sd": 0.009073683572232599,
+      "features_mean": 36.0,
+      "fn_total": 57,
+      "fp_total": 55
+    },
+    {
+      "profile": "optimized",
+      "configurations": 3,
+      "f1_mean": 0.9842242066272898,
+      "f1_sd": 0.0034404235239060684,
+      "mcc_mean": 0.9685554823005612,
+      "mcc_sd": 0.006742110608113455,
+      "features_mean": 32.333333333333336,
+      "fn_total": 55,
+      "fp_total": 46
+    },
+    {
+      "profile": "collaborative",
+      "configurations": 3,
+      "f1_mean": 0.9879638670809655,
+      "f1_sd": 0.003601630442483674,
+      "mcc_mean": 0.9760339963721311,
+      "mcc_sd": 0.007124388812340442,
+      "features_mean": 32.333333333333336,
+      "fn_total": 46,
+      "fp_total": 31
+    },
+    {
+      "profile": "complete",
+      "configurations": 3,
+      "f1_mean": 0.9879638670809655,
+      "f1_sd": 0.003601630442483674,
+      "mcc_mean": 0.9760339963721311,
+      "mcc_sd": 0.007124388812340442,
+      "features_mean": 32.333333333333336,
+      "fn_total": 46,
+      "fp_total": 31
+    }
+  ],
+  "optimization": {
+    "accepted_configurations": 2,
+    "total_configurations": 3,
+    "deployed_features": {
+      "17": 32,
+      "42": 29,
+      "73": 36
+    },
+    "offline_search_runtime_seconds_total": 2293.6001348000136
+  },
+  "collaboration": {
+    "requests_conflicts": 258,
+    "accepted_consensuses": 258,
+    "changed_decisions": 32,
+    "corrections": 28,
+    "harms": 4,
+    "net_corrections": 24
+  },
+  "evidence": {
+    "explanations_total": 3322,
+    "all_technical_conformance_runs_allowed": true,
+    "decision_p95_ms_mean": 18.350143323186785,
+    "shap_p95_ms_mean": 66.59927667448451,
+    "compact_size_reduction_mean": 0.9971441488230233,
+    "compact_p95_speedup_mean": 6.037667084602259,
+    "compact_f1_delta_mean": -0.020078261905203603
+  }
+}

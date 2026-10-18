@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "protocol": "qut-ox4c-nontemporal-confirmatory-v1",
+  "checks": {
+    "all_expected_runs_present": {
+      "passed": true,
+      "evidence": {
+        "expected": 12,
+        "observed": 12,
+        "missing": []
+      }
+    },
+    "final_metrics_reproduce_from_event_logs": {
+      "passed": true,
+      "evidence": {
+        "maximum_absolute_difference": 1.1102230246251565e-16
+      }
+    },
+    "equal_test_event_counts": {
+      "passed": true,
+      "evidence": {
+        "baseline:17": 2140,
+        "baseline:42": 2140,
+        "baseline:73": 2140,
+        "optimized:17": 2140,
+        "optimized:42": 2140,
+        "optimized:73": 2140,
+        "collaborative:17": 2140,
+        "collaborative:42": 2140,
+        "collaborative:73": 2140,
+        "complete:17": 2140,
+        "complete:42": 2140,
+        "complete:73": 2140
+      }
+    },
+    "continuous_learning_disabled_on_qut": {
+      "passed": true,
+      "evidence": "QUT isolates non-temporal dimensions; LYCOS evaluates Continuous Learning"
+    },
+    "feature_candidate_and_deployed_subsets_distinguished": {
+      "passed": true,
+      "evidence": [
+        {
+          "configuration": 17,
+          "candidate": 32,
+          "deployed": 32,
+          "accepted": true
+        },
+        {
+          "configuration": 42,
+          "candidate": 29,
+          "deployed": 29,
+          "accepted": true
+        },
+        {
+          "configuration": 73,
+          "candidate": 32,
+          "deployed": 36,
+          "accepted": false
+        }
+      ]
+    },
+    "collaboration_accounting_is_consistent": {
+      "passed": true,
+      "evidence": [
+        {
+          "configuration": 17,
+          "requests": 84,
+          "accepted": 84,
+          "changed": 11,
+          "corrections": 11,
+          "harms": 0,
+          "net": 11
+        },
+        {
+          "configuration": 42,
+          "requests": 104,
+          "accepted": 104,
+          "changed": 12,
+          "corrections": 10,
+          "harms": 2,
+          "net": 8
+        },
+        {
+          "configuration": 73,
+          "requests": 70,
+          "accepted": 70,
+          "changed": 9,
+          "corrections": 7,
+          "harms": 2,
+          "net": 5
+        }
+      ]
+    },
+    "collaboration_authorized_only_after_calibration_gain": {
+      "passed": true,
+      "evidence": "all three resolvers have positive calibration MCC gain"
+    },
+    "post_decision_evidence_does_not_change_predictions": {
+      "passed": true,
+      "evidence": [
+        {
+          "configuration": 17,
+          "equal": true
+        },
+        {
+          "configuration": 42,
+          "equal": true
+        },
+        {
+          "configuration": 73,
+          "equal": true
+        }
+      ]
+    },
+    "full_vector_treeshap_evidence_is_additive": {
+      "passed": true,
+      "evidence": [
+        {
+          "configuration": 17,
+          "explanations": 1112,
+          "selected_features": 32,
+          "sampled_full_vector_lengths": [
+            32
+          ],
+          "maximum_sampled_additive_error": 1.9984014443252818e-15
+        },
+        {
+          "configuration": 42,
+          "explanations": 1107,
+          "selected_features": 29,
+          "sampled_full_vector_lengths": [
+            29
+          ],
+          "maximum_sampled_additive_error": 1.4432899320127035e-15
+        },
+        {
+          "configuration": 73,
+          "explanations": 1103,
+          "selected_features": 36,
+          "sampled_full_vector_lengths": [
+            36
+          ],
+          "maximum_sampled_additive_error": 1.7763568394002505e-15
+        }
+      ]
+    },
+    "technical_conformance_controls_pass": {
+      "passed": true,
+      "evidence": "machine-readable technical-policy checks"
+    }
+  }
+}

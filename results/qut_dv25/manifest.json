@@ -1,0 +1,106 @@
+{
+  "protocol": "qut-ox4c-nontemporal-confirmatory-v1",
+  "created_at": 1791755417.6447651,
+  "dataset": "QUT-DV25 software supply-chain attack detection",
+  "data_path": "data/qut_dv25/QUT-DV25.csv",
+  "data_sha256": "1c3c480e05066973c5dd748c658ca40d35339e0fe6af8c62b01ad12aa3beddd8",
+  "configurations": [
+    17,
+    42,
+    73
+  ],
+  "configuration_role": "grouped configuration (group split plus algorithmic randomness)",
+  "profiles": [
+    "baseline",
+    "optimized",
+    "collaborative",
+    "complete"
+  ],
+  "profile_definition": {
+    "baseline": {
+      "optimization": false,
+      "collaboration": false,
+      "evidence": false
+    },
+    "optimized": {
+      "optimization": true,
+      "collaboration": false,
+      "evidence": false
+    },
+    "collaborative": {
+      "optimization": true,
+      "collaboration": true,
+      "evidence": false
+    },
+    "complete": {
+      "optimization": true,
+      "collaboration": true,
+      "evidence": true
+    }
+  },
+  "continuous_learning": "disabled on QUT-DV25; evaluated separately on the chronological LYCOS-IDS2017 stream",
+  "optimization": {
+    "method": "A-GRASPQ-FS",
+    "frozen_search_artifacts": [
+      {
+        "configuration": 17,
+        "path": "config/feature_selection/configuration_17.json",
+        "sha256": "d26cf7481ac06a3dc16da6d27d300400138fd5df0fc6ed4eab83a4ed443ee745",
+        "evaluations": 250,
+        "elapsed_seconds": 704.2578985999862,
+        "stop_reason": "budget_exhausted",
+        "constructive_iterations": 50,
+        "local_iterations": 250,
+        "priority_queue_size": 15,
+        "candidate_count": 32,
+        "deployed_count": 32,
+        "deployment_accepted": true
+      },
+      {
+        "configuration": 42,
+        "path": "config/feature_selection/configuration_42.json",
+        "sha256": "cc42a2dd575b8ce172a3d1546a768869555106891fd383551abd20f75c03819f",
+        "evaluations": 250,
+        "elapsed_seconds": 686.0732866000035,
+        "stop_reason": "budget_exhausted",
+        "constructive_iterations": 50,
+        "local_iterations": 250,
+        "priority_queue_size": 15,
+        "candidate_count": 29,
+        "deployed_count": 29,
+        "deployment_accepted": true
+      },
+      {
+        "configuration": 73,
+        "path": "config/feature_selection/configuration_73.json",
+        "sha256": "7c6d9c14b280f2ca56a2acc49b15ebf8fdb7c848b5ef3308580206ce6d9c32ea",
+        "evaluations": 156,
+        "elapsed_seconds": 903.2689496000239,
+        "stop_reason": "budget_exhausted",
+        "constructive_iterations": 50,
+        "local_iterations": 250,
+        "priority_queue_size": 15,
+        "candidate_count": 32,
+        "deployed_count": 36,
+        "deployment_accepted": false
+      }
+    ],
+    "selection_partition": "calibration",
+    "test_partition_used_for_selection": false
+  },
+  "collaboration": {
+    "primary": "random_forest",
+    "counselors": [
+      "hist_gradient_boosting",
+      "compact_tree"
+    ],
+    "trigger": "predicted-label disagreement",
+    "resolver": "minimum attack votes selected by calibration MCC",
+    "authorization": "resolver enabled only for positive calibration MCC gain"
+  },
+  "evidence": {
+    "explanation": "post-decision TreeSHAP for alerts and collaborative decisions",
+    "compliance": "machine-readable technical artifact conformance",
+    "performance": "measured compact candidate, latency, serialized size and runtime resources"
+  }
+}

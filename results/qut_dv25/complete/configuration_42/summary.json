@@ -1,0 +1,594 @@
+{
+  "protocol": "ox4c-conflict-driven-v1",
+  "domain": "software_supply_chain_security",
+  "events": 2140,
+  "experiment": {
+    "dataset": "qut",
+    "profile": "complete",
+    "configuration": 42,
+    "configuration_role": "grouped_configuration",
+    "data_path": "data/qut_dv25/QUT-DV25.csv",
+    "event_limit": null,
+    "selection_cache": "config/feature_selection/configuration_42.json",
+    "continuous_learning_enabled": false,
+    "runtime_seconds": 86.92124270001659
+  },
+  "frozen_metrics": {
+    "tn": 1055,
+    "fp": 16,
+    "fn": 26,
+    "tp": 1043,
+    "accuracy": 0.9803738317757009,
+    "balanced_accuracy": 0.9803694474359748,
+    "precision": 0.9848914069877243,
+    "recall": 0.9756782039289055,
+    "specificity": 0.9850606909430439,
+    "false_positive_rate": 0.014939309056956116,
+    "f1": 0.9802631578947368,
+    "mcc": 0.9607892476676838
+  },
+  "local_metrics": {
+    "tn": 1055,
+    "fp": 16,
+    "fn": 26,
+    "tp": 1043,
+    "accuracy": 0.9803738317757009,
+    "balanced_accuracy": 0.9803694474359748,
+    "precision": 0.9848914069877243,
+    "recall": 0.9756782039289055,
+    "specificity": 0.9850606909430439,
+    "false_positive_rate": 0.014939309056956116,
+    "f1": 0.9802631578947368,
+    "mcc": 0.9607892476676838
+  },
+  "final_metrics": {
+    "tn": 1059,
+    "fp": 12,
+    "fn": 22,
+    "tp": 1047,
+    "accuracy": 0.9841121495327103,
+    "balanced_accuracy": 0.9841077684581785,
+    "precision": 0.9886685552407932,
+    "recall": 0.9794200187090739,
+    "specificity": 0.988795518207283,
+    "false_positive_rate": 0.011204481792717087,
+    "f1": 0.9840225563909775,
+    "mcc": 0.9682662815665604
+  },
+  "features": {
+    "algorithm": "agraspqfs",
+    "selected": [
+      "Read_Processes",
+      "Read_Data_Transfer",
+      "Write_Data_Transfer",
+      "File_Access_Processes",
+      "Total_Dependencies",
+      "Direct_Dependencies",
+      "Indirect_Dependencies",
+      "Root_DIR_Access",
+      "Temp_DIR_Access",
+      "Home_DIR_Access",
+      "User_DIR_Access",
+      "Sys_DIR_Access",
+      "Etc_DIR_Access",
+      "Other_DIR_Access",
+      "Pattern_1",
+      "Pattern_2",
+      "Pattern_3",
+      "Pattern_4",
+      "Pattern_6",
+      "Pattern_7",
+      "IO_Operations",
+      "File_Operations",
+      "Network_Operations",
+      "Time_Operations",
+      "Security_Operations",
+      "Process_Operations",
+      "State_Transition",
+      "Local_IPs_Access",
+      "Local_Port_Access"
+    ],
+    "selected_count": 29,
+    "available_count": 36,
+    "runtime_seconds": 686.0732866000035,
+    "metadata": {
+      "best_score": 0.9638188092114248,
+      "baseline_score": 0.9556712421214492,
+      "evaluations": 250,
+      "cache_hits": 1,
+      "evaluation_sample_fraction": 1.0,
+      "imputation": "training_median",
+      "missing_values_imputed": 0,
+      "fallback": false,
+      "subset_evaluator": "RandomForestClassifier (same downstream configuration)",
+      "scoring": "matthews_corrcoef",
+      "stop_reason": "budget_exhausted",
+      "search_history_rows": 251,
+      "search_phase_counts": {
+        "local_search": 200,
+        "construction": 50,
+        "baseline": 1
+      },
+      "final_full_evaluations": 0,
+      "selected_candidate_revalidated_on_full_search_data": false,
+      "resolved_search": {
+        "constructive_iterations": 50,
+        "local_iterations": 250,
+        "priority_queue_size": 15,
+        "evaluation_sample_size": 1.0,
+        "validation_fraction": 0.3,
+        "rcl_size": 36,
+        "min_features": 3,
+        "max_features": 36,
+        "alpha": 0.7,
+        "update_interval": 10,
+        "max_evaluations": 250,
+        "early_stopping_rounds": 100,
+        "time_budget": 900.0,
+        "cv": 3
+      },
+      "deployment": {
+        "rule": "deploy an improving subset, or a materially smaller subset within the predeclared calibration MCC-loss tolerance",
+        "selection_partition": "calibration",
+        "test_metrics_role": "reporting only; never used for deployment",
+        "candidate_features": [
+          "Read_Processes",
+          "Read_Data_Transfer",
+          "Write_Data_Transfer",
+          "File_Access_Processes",
+          "Total_Dependencies",
+          "Direct_Dependencies",
+          "Indirect_Dependencies",
+          "Root_DIR_Access",
+          "Temp_DIR_Access",
+          "Home_DIR_Access",
+          "User_DIR_Access",
+          "Sys_DIR_Access",
+          "Etc_DIR_Access",
+          "Other_DIR_Access",
+          "Pattern_1",
+          "Pattern_2",
+          "Pattern_3",
+          "Pattern_4",
+          "Pattern_6",
+          "Pattern_7",
+          "IO_Operations",
+          "File_Operations",
+          "Network_Operations",
+          "Time_Operations",
+          "Security_Operations",
+          "Process_Operations",
+          "State_Transition",
+          "Local_IPs_Access",
+          "Local_Port_Access"
+        ],
+        "candidate_count": 29,
+        "candidate_mcc": 0.9700794175348042,
+        "full_feature_mcc": 0.9663409461171532,
+        "calibration_mcc_loss": -0.003738471417651046,
+        "max_allowed_mcc_loss": 0.02,
+        "feature_reduction_fraction": 0.19444444444444442,
+        "minimum_feature_reduction_fraction": 0.25,
+        "predictive_improvement": true,
+        "efficient_tradeoff": false,
+        "accepted": true,
+        "deployed_features": [
+          "Read_Processes",
+          "Read_Data_Transfer",
+          "Write_Data_Transfer",
+          "File_Access_Processes",
+          "Total_Dependencies",
+          "Direct_Dependencies",
+          "Indirect_Dependencies",
+          "Root_DIR_Access",
+          "Temp_DIR_Access",
+          "Home_DIR_Access",
+          "User_DIR_Access",
+          "Sys_DIR_Access",
+          "Etc_DIR_Access",
+          "Other_DIR_Access",
+          "Pattern_1",
+          "Pattern_2",
+          "Pattern_3",
+          "Pattern_4",
+          "Pattern_6",
+          "Pattern_7",
+          "IO_Operations",
+          "File_Operations",
+          "Network_Operations",
+          "Time_Operations",
+          "Security_Operations",
+          "Process_Operations",
+          "State_Transition",
+          "Local_IPs_Access",
+          "Local_Port_Access"
+        ],
+        "deployed_count": 29,
+        "candidate_test_metrics": {
+          "accuracy": 0.9803738317757009,
+          "precision": 0.9848914069877243,
+          "recall": 0.9756782039289055,
+          "f1": 0.9802631578947368,
+          "mcc": 0.9607892476676838,
+          "roc_auc": 0.9986505359861437
+        },
+        "full_feature_test_metrics": {
+          "accuracy": 0.9775700934579439,
+          "precision": 0.980244590780809,
+          "recall": 0.9747427502338635,
+          "f1": 0.9774859287054409,
+          "mcc": 0.9551549297873346,
+          "roc_auc": 0.9984059729286165
+        },
+        "candidate_latency": {
+          "samples": 256,
+          "mean_ms": 7.30906210901594,
+          "p50_ms": 6.261949994950555,
+          "p95_ms": 12.709349990473129,
+          "p99_ms": 14.223884986131447
+        },
+        "full_feature_latency": {
+          "samples": 256,
+          "mean_ms": 8.571976563075623,
+          "p50_ms": 8.089750001090579,
+          "p95_ms": 13.653325011546258,
+          "p99_ms": 16.010794993781015
+        },
+        "candidate_size_bytes": 7760226,
+        "full_feature_size_bytes": 7727074
+      }
+    },
+    "candidate_count": 29,
+    "deployment_accepted": true
+  },
+  "collaboration": {
+    "conflicts": 104,
+    "primary_negative_conflicts": 48,
+    "primary_positive_conflicts": 56,
+    "primary_false_negatives": 26,
+    "primary_false_negatives_with_conflict": 20,
+    "primary_false_positives": 16,
+    "primary_false_positives_with_conflict": 10,
+    "authorized_interventions": 104,
+    "changed_decisions": 12,
+    "corrections": 10,
+    "harms": 2,
+    "net_corrections": 8,
+    "decision_sources": {
+      "random_forest": 2055,
+      "hist_gradient_boosting": 85
+    },
+    "competence": {
+      "primary_classifier": "random_forest",
+      "classifiers": [
+        "random_forest",
+        "hist_gradient_boosting",
+        "compact_tree"
+      ],
+      "consensus": "calibration_selected_vote",
+      "competence": {
+        "random_forest": {
+          "classifier": "random_forest",
+          "global_mcc": 0.9700794175348042,
+          "predictive_value": {
+            "0": 0.9850606909430439,
+            "1": 0.9850187265917603
+          },
+          "class_recall": {
+            "0": 0.9850606909430439,
+            "1": 0.9850187265917603
+          }
+        },
+        "hist_gradient_boosting": {
+          "classifier": "hist_gradient_boosting",
+          "global_mcc": 0.9822555309623305,
+          "predictive_value": {
+            "0": 0.9879406307977736,
+            "1": 0.9943449575871819
+          },
+          "class_recall": {
+            "0": 0.9943977591036415,
+            "1": 0.9878277153558053
+          }
+        },
+        "compact_tree": {
+          "classifier": "compact_tree",
+          "global_mcc": 0.9095899463634429,
+          "predictive_value": {
+            "0": 0.9435336976320583,
+            "1": 0.9663784822286263
+          },
+          "class_recall": {
+            "0": 0.9673202614379085,
+            "1": 0.9419475655430711
+          }
+        }
+      },
+      "conflict_rule": "request counsel when predicted labels disagree",
+      "resolution_rule": "calibration-selected minimum attack votes; select the most reliable voter for the consensus label",
+      "activation": {
+        "rule": "select the voting rule on calibration MCC and authorize it only when calibration MCC improves",
+        "reliability_definition": "P(true label = c | classifier predicts c)",
+        "consensus": "calibration_selected_vote",
+        "vote_candidates": [
+          {
+            "minimum_attack_votes": 1,
+            "mcc": 0.952826573192667,
+            "f1": 0.976508521418701,
+            "recall": 0.9925093632958801,
+            "tn": 1028,
+            "fp": 43,
+            "fn": 8,
+            "tp": 1060
+          },
+          {
+            "minimum_attack_votes": 2,
+            "mcc": 0.9775662827030934,
+            "f1": 0.9887429643527205,
+            "recall": 0.9868913857677902,
+            "tn": 1061,
+            "fp": 10,
+            "fn": 14,
+            "tp": 1054
+          },
+          {
+            "minimum_attack_votes": 3,
+            "mcc": 0.9334637302375655,
+            "f1": 0.9647513278609368,
+            "recall": 0.9353932584269663,
+            "tn": 1067,
+            "fp": 4,
+            "fn": 69,
+            "tp": 999
+          }
+        ],
+        "selected_minimum_attack_votes": 2,
+        "primary_metrics": {
+          "mcc": 0.9700794175348042,
+          "f1": 0.9850187265917603,
+          "recall": 0.9850187265917603,
+          "tn": 1055,
+          "fp": 16,
+          "fn": 16,
+          "tp": 1052
+        },
+        "resolved_metrics": {
+          "mcc": 0.9775662827030934,
+          "f1": 0.9887429643527205,
+          "recall": 0.9868913857677902,
+          "tn": 1061,
+          "fp": 10,
+          "fn": 14,
+          "tp": 1054
+        },
+        "primary_mcc": 0.9700794175348042,
+        "resolved_mcc": 0.9775662827030934,
+        "mcc_gain": 0.007486865168289225,
+        "minimum_mcc_gain": 0.0,
+        "observed_conflicts": 100,
+        "primary_negative_conflicts": 35,
+        "primary_positive_conflicts": 65,
+        "primary_false_negatives_with_conflict": 8,
+        "primary_false_positives_with_conflict": 12,
+        "changed_decisions": 8,
+        "authorized": true
+      }
+    }
+  },
+  "learning": {
+    "enabled": false,
+    "attempts": 0,
+    "promotions": 0,
+    "final_primary_version": 1,
+    "pending_labels": 0,
+    "promotion_rule": "candidate validation MCC > current validation MCC"
+  },
+  "compact_model": {
+    "role": "lightweight candidate; not a TinyML hardware claim",
+    "algorithm": "compact_tree",
+    "feature_count": 29,
+    "validation_metrics": {
+      "accuracy": 0.9579242636746143,
+      "precision": 0.972463768115942,
+      "recall": 0.9424157303370787,
+      "f1": 0.9572039942938659,
+      "mcc": 0.9162810425475403,
+      "roc_auc": 0.9763812828502186
+    },
+    "test_metrics": {
+      "accuracy": 0.955607476635514,
+      "precision": 0.9655831739961759,
+      "recall": 0.9448082319925164,
+      "f1": 0.9550827423167849,
+      "mcc": 0.911423686472211,
+      "roc_auc": 0.9763009662861091
+    },
+    "reference": "frozen pre-stream primary model (version 1)",
+    "primary_test_metrics": {
+      "accuracy": 0.9803738317757009,
+      "precision": 0.9848914069877243,
+      "recall": 0.9756782039289055,
+      "f1": 0.9802631578947368,
+      "mcc": 0.9607892476676838,
+      "roc_auc": 0.9986505359861437
+    },
+    "compact_size_bytes": 21187,
+    "primary_size_bytes": 7760226,
+    "compact_latency": {
+      "samples": 512,
+      "mean_ms": 0.8866257809359013,
+      "p50_ms": 0.8626999915577471,
+      "p95_ms": 1.0448050394188613,
+      "p99_ms": 1.2069479544879866
+    },
+    "primary_latency": {
+      "samples": 512,
+      "mean_ms": 5.636966795236731,
+      "p50_ms": 5.578849988523871,
+      "p95_ms": 6.2296300020534545,
+      "p99_ms": 7.785371989593834
+    }
+  },
+  "technical_conformance": {
+    "policy_id": "ox4c-technical-conformance-v1",
+    "allowed": true,
+    "controls": [
+      {
+        "control": "required_provenance",
+        "passed": true,
+        "evidence": {
+          "required": [
+            "source_file",
+            "sha256",
+            "target",
+            "split_policy",
+            "split_sizes"
+          ],
+          "missing": []
+        }
+      },
+      {
+        "control": "model_version_evidence",
+        "passed": true,
+        "evidence": {
+          "name": "random_forest",
+          "version": 1,
+          "feature_count": 29
+        }
+      },
+      {
+        "control": "audit_record_capability",
+        "passed": true,
+        "evidence": {
+          "available": true
+        }
+      },
+      {
+        "control": "explanation_evidence_capability",
+        "passed": true,
+        "evidence": {
+          "available": true
+        }
+      },
+      {
+        "control": "feature_deny_rules",
+        "passed": true,
+        "evidence": {
+          "denied_features_present": []
+        }
+      },
+      {
+        "control": "feature_allow_rules",
+        "passed": true,
+        "evidence": {
+          "allowlist_active": false,
+          "features_outside_allowlist": []
+        }
+      }
+    ],
+    "violations": []
+  },
+  "performance": {
+    "timings": {
+      "feature_selection": {
+        "count": 1,
+        "mean_ms": 686073.2866000035,
+        "p50_ms": 686073.2866000035,
+        "p95_ms": 686073.2866000035,
+        "p99_ms": 686073.2866000035,
+        "max_ms": 686073.2866000035,
+        "total_ms": 686073.2866000035
+      },
+      "primary_training": {
+        "count": 1,
+        "mean_ms": 282.30809996603057,
+        "p50_ms": 282.30809996603057,
+        "p95_ms": 282.30809996603057,
+        "p99_ms": 282.30809996603057,
+        "max_ms": 282.30809996603057,
+        "total_ms": 282.30809996603057
+      },
+      "counselor_training_hist_gradient_boosting": {
+        "count": 1,
+        "mean_ms": 1123.0512000038289,
+        "p50_ms": 1123.0512000038289,
+        "p95_ms": 1123.0512000038289,
+        "p99_ms": 1123.0512000038289,
+        "max_ms": 1123.0512000038289,
+        "total_ms": 1123.0512000038289
+      },
+      "counselor_training_compact_tree": {
+        "count": 1,
+        "mean_ms": 75.58440003776923,
+        "p50_ms": 75.58440003776923,
+        "p95_ms": 75.58440003776923,
+        "p99_ms": 75.58440003776923,
+        "max_ms": 75.58440003776923,
+        "total_ms": 75.58440003776923
+      },
+      "classifier_pool_inference": {
+        "count": 2140,
+        "mean_ms": 13.940802336753146,
+        "p50_ms": 13.134099979652092,
+        "p95_ms": 18.352250041789375,
+        "p99_ms": 19.581459997571073,
+        "max_ms": 30.65869997953996,
+        "total_ms": 29833.317000651732
+      },
+      "decision_availability": {
+        "count": 2140,
+        "mean_ms": 13.947809392762606,
+        "p50_ms": 13.140600000042468,
+        "p95_ms": 18.359644984593615,
+        "p99_ms": 19.58966500184033,
+        "max_ms": 30.66629997920245,
+        "total_ms": 29848.312100511976
+      },
+      "shap": {
+        "count": 1107,
+        "mean_ms": 46.14633134498523,
+        "p50_ms": 41.61520005436614,
+        "p95_ms": 70.84598000510596,
+        "p99_ms": 76.87773799407296,
+        "max_ms": 89.85180000308901,
+        "total_ms": 51083.988798898645
+      },
+      "audit_completion": {
+        "count": 2140,
+        "mean_ms": 0.15503869160235137,
+        "p50_ms": 0.15499998698942363,
+        "p95_ms": 0.20130001939833164,
+        "p99_ms": 0.3372909955214904,
+        "max_ms": 13.304100022651255,
+        "total_ms": 331.78280002903193
+      },
+      "pipeline_completion": {
+        "count": 2140,
+        "mean_ms": 37.99290915904349,
+        "p50_ms": 51.832999975886196,
+        "p95_ms": 75.29815500311088,
+        "p99_ms": 89.71480402164163,
+        "max_ms": 108.47069998271763,
+        "total_ms": 81304.82560035307
+      },
+      "stream_wall": {
+        "count": 1,
+        "mean_ms": 81710.24450002005,
+        "p50_ms": 81710.24450002005,
+        "p95_ms": 81710.24450002005,
+        "p99_ms": 81710.24450002005,
+        "max_ms": 81710.24450002005,
+        "total_ms": 81710.24450002005
+      }
+    },
+    "counters": {
+      "feature_selection_cache_reused": 1,
+      "explanations_generated": 1107,
+      "classifier_conflicts": 104,
+      "conflict_decision_changes": 12,
+      "feedback_pending_at_stream_end": 0,
+      "stream_events": 2140
+    },
+    "throughput_events_per_second": 26.19010643150719
+  }
+}

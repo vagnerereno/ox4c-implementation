@@ -1,0 +1,32 @@
+{
+  "arguments": {
+    "data_root": "data/lycos_ids2017",
+    "output": "artifacts/lycos_ids2017",
+    "configurations": [
+      17,
+      42,
+      73
+    ],
+    "label_delays": [
+      1,
+      2,
+      5
+    ],
+    "max_events_per_day": 100000,
+    "batch_size": 10000,
+    "max_training_rows": 200000,
+    "retention_fraction": 0.2,
+    "retention_max_per_label": 1000,
+    "estimators": 100,
+    "min_samples_leaf": 2,
+    "progress_every_batches": 10
+  },
+  "source_archives": {
+    "monday": "Monday-WorkingHours.pcap_lycos.zip",
+    "tuesday": "Tuesday-WorkingHours.pcap_lycos.zip",
+    "wednesday": "Wednesday-WorkingHours.pcap_lycos.zip",
+    "thursday": "Thursday-WorkingHours.pcap_lycos.zip",
+    "friday": "Friday-WorkingHours.pcap_lycos.zip"
+  },
+  "official_label_rules": "LYCOS-IDS2017 labelling.py, reproduced by adapter"
+}

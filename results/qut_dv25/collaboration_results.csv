@@ -1,0 +1,4 @@
+configuration,requests_conflicts,accepted_consensuses,changed_decisions,corrections,harms,net_corrections,primary_false_negatives,false_negatives_with_conflict,final_false_negatives,calibration_conflicts,calibration_mcc_gain,selected_minimum_attack_votes,resolver_authorized
+17,84,84,11,11,0,11,17,12,13,89,0.00745607251770497,2,True
+42,104,104,12,10,2,8,26,20,22,100,0.007486865168289225,2,True
+73,70,70,9,7,2,5,12,8,11,76,0.0018547482350922406,2,True

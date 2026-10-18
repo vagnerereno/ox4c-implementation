@@ -1,0 +1,46 @@
+{
+  "role": "lightweight candidate; not a TinyML hardware claim",
+  "algorithm": "compact_tree",
+  "feature_count": 36,
+  "validation_metrics": {
+    "accuracy": 0.9649368863955119,
+    "precision": 0.9661971830985916,
+    "recall": 0.9634831460674157,
+    "f1": 0.9648382559774965,
+    "mcc": 0.9298770172841374,
+    "roc_auc": 0.9813707786485382
+  },
+  "test_metrics": {
+    "accuracy": 0.9691588785046729,
+    "precision": 0.9700093720712277,
+    "recall": 0.9681945743685687,
+    "f1": 0.9691011235955056,
+    "mcc": 0.9383192345206822,
+    "roc_auc": 0.9802393049517906
+  },
+  "reference": "frozen pre-stream primary model (version 1)",
+  "primary_test_metrics": {
+    "accuracy": 0.9864485981308411,
+    "precision": 0.984171322160149,
+    "recall": 0.9887745556594949,
+    "f1": 0.9864675688287448,
+    "mcc": 0.9729079131287989,
+    "roc_auc": 0.9991815871967745
+  },
+  "compact_size_bytes": 23059,
+  "primary_size_bytes": 7556354,
+  "compact_latency": {
+    "samples": 512,
+    "mean_ms": 0.8630687492541256,
+    "p50_ms": 0.839899992570281,
+    "p95_ms": 1.0014400060754267,
+    "p99_ms": 1.1104719701688737
+  },
+  "primary_latency": {
+    "samples": 512,
+    "mean_ms": 5.634550194599797,
+    "p50_ms": 5.622450000373647,
+    "p95_ms": 6.187414997839369,
+    "p99_ms": 6.572150023421272
+  }
+}
