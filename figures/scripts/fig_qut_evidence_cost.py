@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -30,10 +31,57 @@ def configure_style() -> None:
     })
 
 
-def save_panel(fig: plt.Figure, output_dir: Path, stem: str) -> None:
+def save_panel(
+    fig: plt.Figure, output_dir: Path, stem: str, *, pdf_only: bool = False,
+) -> None:
     fig.savefig(output_dir / f"{stem}.pdf", bbox_inches="tight")
-    fig.savefig(output_dir / f"{stem}.png", dpi=300, bbox_inches="tight")
+    if not pdf_only:
+        fig.savefig(output_dir / f"{stem}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
+
+
+def aggregate_shap(
+    event_root: Path,
+    *,
+    model_algorithm: str = "random_forest",
+    output_space: str = "probability",
+) -> pd.DataFrame:
+    values: dict[str, list[float]] = {}
+    explained_decisions = 0
+
+    paths = sorted(event_root.glob("configuration_*/event_log.csv"))
+    if not paths:
+        raise FileNotFoundError(f"No event logs found under {event_root}")
+
+    for path in paths:
+        frame = pd.read_csv(path, usecols=["explanation"])
+        for raw in frame["explanation"].dropna():
+            if raw == "{}":
+                continue
+            payload = ast.literal_eval(raw)
+            if (
+                payload.get("model_algorithm") != model_algorithm
+                or payload.get("output_space") != output_space
+            ):
+                continue
+            explained_decisions += 1
+            for feature, value in payload["full_contributions"].items():
+                values.setdefault(feature, []).append(float(value))
+
+    rows = []
+    for feature, contributions in values.items():
+        vector = np.asarray(contributions, dtype=float)
+        rows.append({
+            "feature": feature,
+            "mean_abs_shap": float(np.mean(np.abs(vector))),
+            "mean_signed_shap": float(np.mean(vector)),
+            "positive_fraction": float(np.mean(vector > 0)),
+            "observations": int(vector.size),
+            "explained_decisions": explained_decisions,
+            "model_algorithm": model_algorithm,
+            "output_space": output_space,
+        })
+    return pd.DataFrame(rows).sort_values("mean_abs_shap", ascending=False)
 
 
 def plot_latency(evidence: pd.DataFrame, output_dir: Path) -> None:
@@ -96,7 +144,9 @@ def plot_compact_tradeoff(evidence: pd.DataFrame, output_dir: Path) -> None:
     save_panel(fig, output_dir, "fig_qut_cost_b_compact")
 
 
-def plot_shap_magnitude(shap: pd.DataFrame, output_dir: Path) -> None:
+def plot_shap_magnitude(
+    shap: pd.DataFrame, output_dir: Path, *, pdf_only: bool = False,
+) -> None:
     fig, ax = plt.subplots(figsize=(10.8, 5.2))
     ordered = shap.iloc[::-1].reset_index(drop=True)
     labels = [value.replace("_", " ") for value in ordered["feature"]]
@@ -111,7 +161,7 @@ def plot_shap_magnitude(shap: pd.DataFrame, output_dir: Path) -> None:
     ax.spines[["top", "right"]].set_visible(False)
     ax.tick_params(axis="y", labelsize=16)
     fig.subplots_adjust(left=0.24, right=0.98, top=0.98, bottom=0.16)
-    save_panel(fig, output_dir, "fig_qut_cost_c_shap")
+    save_panel(fig, output_dir, "fig_qut_cost_c_shap", pdf_only=pdf_only)
 
 
 def main() -> None:
@@ -123,15 +173,31 @@ def main() -> None:
     parser.add_argument(
         "--output-dir", type=Path, default=default_root / "figures" / "output",
     )
+    parser.add_argument(
+        "--event-dir", type=Path, default=None,
+        help="Directory containing configuration_*/event_log.csv explanation records.",
+    )
+    parser.add_argument(
+        "--shap-only", action="store_true",
+        help="Generate only the TreeSHAP magnitude panel.",
+    )
+    parser.add_argument(
+        "--pdf-only", action="store_true",
+        help="Do not generate PNG copies.",
+    )
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     evidence = pd.read_csv(args.data_dir / "evidence_results.csv")
-    shap = pd.read_csv(args.data_dir / "shap_global.csv").head(8)
+    event_dir = args.event_dir or args.data_dir / "complete"
+    shap_all = aggregate_shap(event_dir)
+    shap_all.to_csv(args.data_dir / "shap_global.csv", index=False)
+    shap = shap_all.head(8)
     configure_style()
-    plot_latency(evidence, args.output_dir)
-    plot_compact_tradeoff(evidence, args.output_dir)
-    plot_shap_magnitude(shap, args.output_dir)
+    if not args.shap_only:
+        plot_latency(evidence, args.output_dir)
+        plot_compact_tradeoff(evidence, args.output_dir)
+    plot_shap_magnitude(shap, args.output_dir, pdf_only=args.pdf_only)
 
 
 if __name__ == "__main__":

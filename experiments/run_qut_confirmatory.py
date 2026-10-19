@@ -23,6 +23,7 @@ from common import summarize_run  # noqa: E402
 PROFILES = {
     "baseline": dict(optimization=False, collaboration=False, evidence=False),
     "optimized": dict(optimization=True, collaboration=False, evidence=False),
+    "collaboration_only": dict(optimization=False, collaboration=True, evidence=False),
     "collaborative": dict(optimization=True, collaboration=True, evidence=False),
     "complete": dict(optimization=True, collaboration=True, evidence=True),
 }
@@ -129,7 +130,7 @@ def main() -> None:
         })
 
     manifest = {
-        "protocol": "qut-ox4c-nontemporal-confirmatory-v1",
+        "protocol": "qut-ox4c-nontemporal-confirmatory-v2",
         "created_at": time.time(),
         "dataset": "QUT-DV25 software supply-chain attack detection",
         "data_path": str(args.qut_data),

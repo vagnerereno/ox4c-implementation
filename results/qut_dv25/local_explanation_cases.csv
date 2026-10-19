@@ -1,0 +1,3 @@
+case_type,eligible_cases,configuration,sample_id,true_label,local_probability,final_probability,decision_source,model_algorithm,model_version,output_space,base_value,model_output
+primary_true_positive,3052,73,tensofloaw-1.0.0.tar.gz,1,0.9854166666666666,0.9854166666666666,random_forest,random_forest,1,probability,0.5002035664254028,0.9854166666666676
+collaborative_correction,28,73,killhydra-3.39.tar.gz,1,0.4909077380952381,0.7604564049757562,hist_gradient_boosting,hist_gradient_boosting,1,raw_log_odds,0.01050209207459235,1.1551833604556874

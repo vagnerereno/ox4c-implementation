@@ -1,12 +1,12 @@
 {
   "status": "passed",
-  "protocol": "qut-ox4c-nontemporal-confirmatory-v1",
+  "protocol": "qut-ox4c-nontemporal-confirmatory-v2",
   "checks": {
     "all_expected_runs_present": {
       "passed": true,
       "evidence": {
-        "expected": 12,
-        "observed": 12,
+        "expected": 15,
+        "observed": 15,
         "missing": []
       }
     },
@@ -25,6 +25,9 @@
         "optimized:17": 2140,
         "optimized:42": 2140,
         "optimized:73": 2140,
+        "collaboration_only:17": 2140,
+        "collaboration_only:42": 2140,
+        "collaboration_only:73": 2140,
         "collaborative:17": 2140,
         "collaborative:42": 2140,
         "collaborative:73": 2140,

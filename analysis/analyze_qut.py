@@ -9,7 +9,13 @@ from pathlib import Path
 import pandas as pd
 
 
-PROFILE_ORDER = ("baseline", "optimized", "collaborative", "complete")
+PROFILE_ORDER = (
+    "baseline",
+    "optimized",
+    "collaboration_only",
+    "collaborative",
+    "complete",
+)
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -131,7 +137,7 @@ def main() -> None:
     profile_aggregate.to_csv(args.input / "profile_aggregate.csv", index=False)
 
     summary = {
-        "protocol": "qut-ox4c-nontemporal-confirmatory-v1",
+        "protocol": "qut-ox4c-nontemporal-confirmatory-v2",
         "configurations": sorted(profiles["configuration"].unique().tolist()),
         "profile_aggregate": profile_aggregate.to_dict(orient="records"),
         "optimization": {

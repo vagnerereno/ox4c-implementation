@@ -1,19 +1,19 @@
 {
   "status": "passed",
-  "protocol": "lycos-prequential-delayed-supervision-and-retention-v1",
+  "protocol": "lycos-prequential-delayed-supervision-and-retention-v2",
   "checks": {
     "all_configuration_delay_combinations": {
       "passed": true,
       "evidence": {
-        "expected": 9,
-        "observed": 9
+        "expected": 12,
+        "observed": 12
       }
     },
     "three_policy_rows_for_every_batch": {
       "passed": true,
       "evidence": {
-        "expected_rows": 810,
-        "observed_rows": 810
+        "expected_rows": 1080,
+        "observed_rows": 1080
       }
     },
     "policy_inputs_identical_within_batch": {
@@ -23,7 +23,7 @@
     "feedback_released_after_exact_configured_delay": {
       "passed": true,
       "evidence": {
-        "minimum_observed_delay": 1,
+        "minimum_observed_delay": 0,
         "maximum_observed_delay": 5
       }
     },
@@ -44,20 +44,20 @@
     "retention_evaluated_after_every_stream_day": {
       "passed": true,
       "evidence": {
-        "expected_rows": 81,
-        "observed_rows": 81
+        "expected_rows": 108,
+        "observed_rows": 108
       }
     },
     "family_retention_contains_no_duplicate_keys": {
       "passed": true,
       "evidence": {
-        "rows": 810
+        "rows": 1080
       }
     },
     "batch_key_fields_complete": {
       "passed": true,
       "evidence": {
-        "rows": 810,
+        "rows": 1080,
         "key_columns": [
           "configuration",
           "label_delay_batches",
@@ -76,10 +76,10 @@
     }
   },
   "output_row_counts": {
-    "batch_results": 810,
-    "update_results": 492,
-    "aggregate_results": 27,
-    "retention_results": 81,
-    "retention_by_family": 810
+    "batch_results": 1080,
+    "update_results": 672,
+    "aggregate_results": 36,
+    "retention_results": 108,
+    "retention_by_family": 1080
   }
 }

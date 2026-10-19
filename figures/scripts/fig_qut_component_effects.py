@@ -32,15 +32,20 @@ def configure_style() -> None:
     })
 
 
-def save_panel(fig: plt.Figure, output_dir: Path, stem: str) -> None:
+def save_panel(
+    fig: plt.Figure, output_dir: Path, stem: str, *, pdf_only: bool = False,
+) -> None:
     fig.savefig(output_dir / f"{stem}.pdf", bbox_inches="tight")
-    fig.savefig(output_dir / f"{stem}.png", dpi=300, bbox_inches="tight")
+    if not pdf_only:
+        fig.savefig(output_dir / f"{stem}.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
-def plot_profile_effect(profiles: pd.DataFrame, output_dir: Path) -> None:
-    fig, ax = plt.subplots(figsize=(6.4, 4.8))
-    order = ["baseline", "optimized", "collaborative"]
+def plot_profile_effect(
+    profiles: pd.DataFrame, output_dir: Path, *, pdf_only: bool = False,
+) -> None:
+    fig, ax = plt.subplots(figsize=(8.4, 5.2))
+    order = ["baseline", "optimized", "collaboration_only", "collaborative"]
     x = np.arange(len(order))
     colors = {17: BLUE, 42: ORANGE, 73: GREEN}
     for configuration, group in profiles.groupby("configuration"):
@@ -51,14 +56,28 @@ def plot_profile_effect(profiles: pd.DataFrame, output_dir: Path) -> None:
         )
     means = profiles.groupby("profile")["mcc"].mean().reindex(order).to_numpy()
     ax.plot(x, means, color=INK, linewidth=3.2, marker="D", markersize=8, label="Mean")
-    ax.set_xticks(x, ["Baseline", "Optimized", "Collaborative"], rotation=18, ha="right")
-    ax.set_ylabel("MCC (expanded axis)")
+    ax.set_xticks(
+        x,
+        ["Baseline", "Optimization\nonly", "Collaboration\nonly", "Optimization +\nCollaboration"],
+        rotation=25,
+        ha="right",
+        multialignment="center",
+        rotation_mode="anchor",
+        fontsize=18,
+    )
+    ax.set_ylabel("MCC (expanded axis)", fontsize=21)
+    ax.tick_params(axis="y", labelsize=18)
     ax.set_ylim(0.95, 0.986)
     ax.grid(axis="y", alpha=0.25)
-    ax.legend(frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.02), ncol=2)
+    ax.legend(
+        frameon=False, loc="lower center", bbox_to_anchor=(0.5, 1.02),
+        ncol=2, fontsize=18,
+    )
     ax.spines[["top", "right"]].set_visible(False)
-    fig.subplots_adjust(left=0.18, right=0.98, top=0.78, bottom=0.20)
-    save_panel(fig, output_dir, "fig_qut_effects_a_profile")
+    fig.subplots_adjust(left=0.14, right=0.98, top=0.77, bottom=0.26)
+    save_panel(
+        fig, output_dir, "fig_qut_effects_a_profile", pdf_only=pdf_only,
+    )
 
 
 def plot_feature_deployment(optimization: pd.DataFrame, output_dir: Path) -> None:
@@ -133,16 +152,28 @@ def main() -> None:
     parser.add_argument(
         "--output-dir", type=Path, default=default_root / "figures" / "output",
     )
+    parser.add_argument(
+        "--panel-a-only", action="store_true",
+        help="Generate only the profile-effect panel.",
+    )
+    parser.add_argument(
+        "--pdf-only", action="store_true",
+        help="Do not generate PNG copies.",
+    )
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     profiles = pd.read_csv(args.data_dir / "profile_results.csv")
-    profiles = profiles.loc[profiles["profile"].isin(["baseline", "optimized", "collaborative"])]
+    profiles = profiles.loc[profiles["profile"].isin([
+        "baseline", "optimized", "collaboration_only", "collaborative",
+    ])]
     optimization = pd.read_csv(args.data_dir / "optimization_results.csv")
     collaboration = pd.read_csv(args.data_dir / "collaboration_results.csv")
 
     configure_style()
-    plot_profile_effect(profiles, args.output_dir)
+    plot_profile_effect(profiles, args.output_dir, pdf_only=args.pdf_only)
+    if args.panel_a_only:
+        return
     plot_feature_deployment(optimization, args.output_dir)
     plot_conflict_outcomes(collaboration, args.output_dir)
 

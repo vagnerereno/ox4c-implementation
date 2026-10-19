@@ -1,5 +1,5 @@
 {
-  "protocol": "qut-ox4c-nontemporal-confirmatory-v1",
+  "protocol": "qut-ox4c-nontemporal-confirmatory-v2",
   "configurations": [
     17,
     42,
@@ -27,6 +27,17 @@
       "features_mean": 32.333333333333336,
       "fn_total": 55,
       "fp_total": 46
+    },
+    {
+      "profile": "collaboration_only",
+      "configurations": 3,
+      "f1_mean": 0.9861158458031775,
+      "f1_sd": 0.00241492529577503,
+      "mcc_mean": 0.9722764935807713,
+      "mcc_sd": 0.004795681365326144,
+      "features_mean": 36.0,
+      "fn_total": 46,
+      "fp_total": 43
     },
     {
       "profile": "collaborative",

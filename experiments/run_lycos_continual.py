@@ -508,7 +508,13 @@ def main() -> None:
         "--output", type=Path, default=ROOT / "artifacts" / "lycos_ids2017",
     )
     parser.add_argument("--configurations", type=int, nargs="+", default=[17, 42, 73])
-    parser.add_argument("--label-delays", type=int, nargs="+", default=[1, 2, 5])
+    parser.add_argument(
+        "--label-delays", type=int, nargs="+", default=[0, 1, 2, 5],
+        help=(
+            "complete future batches before label release; zero releases labels "
+            "immediately after the current batch is predicted"
+        ),
+    )
     parser.add_argument(
         "--max-events-per-day", type=int, default=100_000,
         help="0 uses every eligible event; positive values use systematic temporal sampling",
@@ -523,8 +529,8 @@ def main() -> None:
     args = parser.parse_args()
     if args.batch_size <= 0 or args.max_training_rows < args.batch_size:
         parser.error("batch-size must be positive and fit inside max-training-rows")
-    if any(delay < 1 for delay in args.label_delays):
-        parser.error("label delays must be at least one complete batch")
+    if any(delay < 0 for delay in args.label_delays):
+        parser.error("label delays cannot be negative")
     if not 0 < args.retention_fraction < 1:
         parser.error("retention-fraction must be between zero and one")
     args.output.mkdir(parents=True, exist_ok=True)
@@ -581,7 +587,7 @@ def main() -> None:
 
     across = summarize(results)
     summary = {
-        "protocol": "lycos-prequential-delayed-supervision-and-retention-v1",
+        "protocol": "lycos-prequential-delayed-supervision-and-retention-v2",
         "dataset": "LYCOS-IDS2017 corrected CIC-IDS2017 flows",
         "study_scope": "OX4C Continuous Learning dimension only",
         "initial_period": list(INITIAL_DAYS),

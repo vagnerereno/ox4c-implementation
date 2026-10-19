@@ -1,151 +1,211 @@
 configuration,label_delay_batches,after_global_batch,source_global_batch,source_day,policy,status,reason,new_model_version,feedback_events,feedback_attacks,training_events,retraining_seconds
-17,1,2,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.17233390000183135
+17,0,1,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1745259000163059
+17,0,1,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.5303913000097964
+17,0,2,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.1859493000083603
+17,0,2,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.645080699992832
+17,0,3,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1686843000061344
+17,0,3,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,2.9710704000026453
+17,0,4,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1714368999819271
+17,0,4,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.1876355999847874
+17,0,5,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1734357000095769
+17,0,5,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.27418479998596
+17,0,6,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.1971222000138368
+17,0,6,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.251922299998114
+17,0,7,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
+17,0,7,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.2685880000062757
+17,0,8,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1610138999822083
+17,0,8,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.273404500010656
+17,0,9,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1630774999794084
+17,0,9,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.428494799998589
+17,0,10,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
+17,0,10,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.2814972999913152
+17,0,11,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1889691000105813
+17,0,11,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.255878299998585
+17,0,12,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.175452800001949
+17,0,12,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.499215800024104
+17,0,13,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1682814999949187
+17,0,13,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.31907019999926
+17,0,14,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1728941000183113
+17,0,14,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.2986658999871
+17,0,15,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1719637000060174
+17,0,15,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.214537800027756
+17,0,16,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1706133999978192
+17,0,16,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.270944599993527
+17,0,17,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1579932000022381
+17,0,17,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.300585300021339
+17,0,18,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
+17,0,18,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.275643900007708
+17,0,19,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
+17,0,19,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.257652300002519
+17,0,20,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
+17,0,20,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.275410100002773
+17,0,21,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1578916999860666
+17,0,21,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.309844100003829
+17,0,22,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.164668299985351
+17,0,22,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.3233415000140667
+17,0,23,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
+17,0,23,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.1526693000050727
+17,0,24,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.1742261000035796
+17,0,24,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.020315200003097
+17,0,25,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1571004000143148
+17,0,25,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,2.772684499999741
+17,0,26,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.1578513999993447
+17,0,26,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,2.924745299998904
+17,0,27,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.1728299999958835
+17,0,27,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.029902299982496
+17,0,28,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1707115000172052
+17,0,28,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,2.984503199986648
+17,0,29,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.1604625000036321
+17,0,29,29,friday,rolling_replay,updated,released feedback appended to bounded replay history,30,10000,8959,200000,2.9529749999928754
+17,0,30,30,friday,latest_batch,updated,latest released batch contains both classes,25,6975,2638,6975,0.1502896000165492
+17,0,30,30,friday,rolling_replay,updated,released feedback appended to bounded replay history,31,6975,2638,200000,2.961828900006367
+17,1,2,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1723339000018313
 17,1,2,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.5260081999585964
-17,1,3,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.19445439998526126
+17,1,3,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.1944543999852612
 17,1,3,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.739077400008682
-17,1,4,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.17240169999422505
+17,1,4,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.172401699994225
 17,1,4,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.1491846999851987
-17,1,5,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.17360560002271086
+17,1,5,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1736056000227108
 17,1,5,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.4143919000052847
-17,1,6,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.18098599999211729
+17,1,6,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1809859999921172
 17,1,6,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.5451675999793224
-17,1,7,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.21366489998763427
-17,1,7,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.5425010999897495
+17,1,7,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2136648999876342
+17,1,7,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.542501099989749
 17,1,8,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
 17,1,8,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.485311200027354
-17,1,9,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.16284360003191978
+17,1,9,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1628436000319197
 17,1,9,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.477168100012932
-17,1,10,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.16275060002226382
-17,1,10,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.6662490000016987
+17,1,10,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1627506000222638
+17,1,10,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.6662490000016983
 17,1,11,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
-17,1,11,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.5710272999713197
-17,1,12,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.17075469996780157
+17,1,11,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.57102729997132
+17,1,12,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1707546999678015
 17,1,12,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.5195793000166304
-17,1,13,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.17570660001365468
+17,1,13,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1757066000136546
 17,1,13,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.5896270000375807
 17,1,14,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1816901999991387
 17,1,14,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.498530699987896
-17,1,15,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.17150869994657114
+17,1,15,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1715086999465711
 17,1,15,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.591370399983134
 17,1,16,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1780443000025116
 17,1,16,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.477672300010454
-17,1,17,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.18329609994543716
-17,1,17,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.4814400000032037
-17,1,18,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.16967400000430644
-17,1,18,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.5486629000515677
+17,1,17,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1832960999454371
+17,1,17,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.481440000003204
+17,1,18,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1696740000043064
+17,1,18,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.548662900051568
 17,1,19,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
-17,1,19,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.5337626000400633
+17,1,19,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.5337626000400637
 17,1,20,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 17,1,20,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.6370142999803647
 17,1,21,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
 17,1,21,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.5277549999882467
-17,1,22,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.17383459996199235
+17,1,22,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1738345999619923
 17,1,22,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.574238899978809
-17,1,23,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.17628950002836064
+17,1,23,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1762895000283606
 17,1,23,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.6157137000118382
 17,1,24,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
 17,1,24,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.5282507999800146
-17,1,25,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.20521970000118017
+17,1,25,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.2052197000011801
 17,1,25,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.5572910999762826
 17,1,26,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1726564000127837
-17,1,26,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.0584164999891073
-17,1,27,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.15783430001465604
+17,1,26,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.0584164999891077
+17,1,27,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.157834300014656
 17,1,27,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,3.1516514999675564
-17,1,28,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.17983370000729337
+17,1,28,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.1798337000072933
 17,1,28,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.2797102999757044
 17,1,29,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1823304000427015
-17,1,29,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.2241090000024997
-17,1,30,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.17165879998356104
+17,1,29,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.2241090000025
+17,1,30,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.171658799983561
 17,1,30,29,friday,rolling_replay,updated,released feedback appended to bounded replay history,30,10000,8959,200000,3.252240699948743
-17,2,3,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.17308109998703003
+17,2,3,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.17308109998703
 17,2,3,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.5861361999996006
 17,2,4,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.2012680000043474
 17,2,4,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.743994600023143
-17,2,5,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.17188660003012046
+17,2,5,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1718866000301204
 17,2,5,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.203163099999074
-17,2,6,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.17718759999843314
+17,2,6,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1771875999984331
 17,2,6,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.4516163999796845
-17,2,7,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.17051069997251034
+17,2,7,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1705106999725103
 17,2,7,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.490801799984183
 17,2,8,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2100200999993831
 17,2,8,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.488192299962975
 17,2,9,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
-17,2,9,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.5853743000188842
+17,2,9,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.585374300018884
 17,2,10,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.166319299954921
 17,2,10,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.5438440999714658
-17,2,11,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.16203959996346384
+17,2,11,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1620395999634638
 17,2,11,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.7035479999613017
 17,2,12,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
-17,2,12,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.6668121999828145
+17,2,12,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.6668121999828154
 17,2,13,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1835665999678895
 17,2,13,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.6046425999957137
-17,2,14,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.18196489999536425
+17,2,14,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1819648999953642
 17,2,14,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.6074365000240505
 17,2,15,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1740455999970436
 17,2,15,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.557996599993203
-17,2,16,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.17358170001534745
+17,2,16,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1735817000153474
 17,2,16,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.564644700032659
-17,2,17,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.18439050001325086
+17,2,17,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1843905000132508
 17,2,17,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.533676400023978
-17,2,18,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.18452650000108406
+17,2,18,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.184526500001084
 17,2,18,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.5878706999938004
-17,2,19,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.16327560000354424
+17,2,19,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1632756000035442
 17,2,19,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.596238899976015
 17,2,20,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 17,2,20,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.5939329999964684
 17,2,21,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 17,2,21,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.5550433000316843
 17,2,22,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
-17,2,22,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.5492359999916516
-17,2,23,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.16327189997537062
-17,2,23,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.6130429999902844
+17,2,22,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.549235999991652
+17,2,23,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1632718999753706
+17,2,23,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.613042999990285
 17,2,24,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1759314999799244
 17,2,24,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.6286588999792
 17,2,25,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
 17,2,25,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.4663670000154525
-17,2,26,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.18491219996940345
+17,2,26,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.1849121999694034
 17,2,26,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.308032299974002
-17,2,27,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.15783000004012138
+17,2,27,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1578300000401213
 17,2,27,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.021162099961657
-17,2,28,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.16764509998029098
-17,2,28,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,3.1795197000028566
-17,2,29,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.18634519999613985
+17,2,28,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.1676450999802909
+17,2,28,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,3.179519700002857
+17,2,29,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.1863451999961398
 17,2,29,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.252211500017438
-17,2,30,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.18731230002595112
+17,2,30,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1873123000259511
 17,2,30,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.252993800037075
-17,5,6,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.17350929998792708
+17,5,6,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.173509299987927
 17,5,6,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.662447999988217
-17,5,7,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.20906760002253577
+17,5,7,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.2090676000225357
 17,5,7,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.7806655000313185
-17,5,8,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.17386340000666678
+17,5,8,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1738634000066667
 17,5,8,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.256150500033982
 17,5,9,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.185066599980928
 17,5,9,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.4872260999982245
-17,5,10,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.18303700000979006
+17,5,10,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.18303700000979
 17,5,10,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.5264566999976523
-17,5,11,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.20894649997353554
+17,5,11,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2089464999735355
 17,5,11,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.4877729000290856
 17,5,12,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
 17,5,12,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.5017381999641657
-17,5,13,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.16243949998170137
+17,5,13,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1624394999817013
 17,5,13,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.5590769999544136
-17,5,14,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.16766700003063306
+17,5,14,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.167667000030633
 17,5,14,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.668936100031715
 17,5,15,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
-17,5,15,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.6261873000185005
+17,5,15,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.626187300018501
 17,5,16,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1630581999779679
 17,5,16,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.5719595000264235
 17,5,17,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1764668000396341
 17,5,17,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.706980700022541
-17,5,18,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.18367430003127083
+17,5,18,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1836743000312708
 17,5,18,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.556430399999954
 17,5,19,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1848549999995157
 17,5,19,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.597643600020092
 17,5,20,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1842729999916628
 17,5,20,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.536765100026969
-17,5,21,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.18410190002759919
+17,5,21,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1841019000275991
 17,5,21,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.586824399942998
-17,5,22,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.16318009997485206
+17,5,22,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.163180099974852
 17,5,22,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.580435400013812
 17,5,23,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 17,5,23,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.5950930999824777
@@ -154,48 +214,108 @@ configuration,label_delay_batches,after_global_batch,source_global_batch,source_
 17,5,25,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
 17,5,25,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.6377594000077806
 17,5,26,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1761374999769032
-17,5,26,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.7332121999934316
-17,5,27,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.17428510001627728
-17,5,27,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.6966997999697924
+17,5,26,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.733212199993432
+17,5,27,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1742851000162772
+17,5,27,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.696699799969792
 17,5,28,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
 17,5,28,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.49627080000937
-17,5,29,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.18721300002653152
-17,5,29,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.2853769999928772
-17,5,30,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.16077150002820417
+17,5,29,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.1872130000265315
+17,5,29,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.285376999992877
+17,5,30,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1607715000282041
 17,5,30,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.0750421000411734
+42,0,1,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1614300000073854
+42,0,1,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.552142400003504
+42,0,2,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.1847840000118594
+42,0,2,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.573464099987177
+42,0,3,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1641802999947685
+42,0,3,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,2.9738604000012856
+42,0,4,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1703906999900937
+42,0,4,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.208496700011892
+42,0,5,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1697032999945804
+42,0,5,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.318392499990296
+42,0,6,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.1952286000014282
+42,0,6,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.316174300009152
+42,0,7,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
+42,0,7,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.2290961999970023
+42,0,8,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1617321000085212
+42,0,8,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.3653170999896247
+42,0,9,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1600001000042539
+42,0,9,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.3447007999930065
+42,0,10,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
+42,0,10,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.3093241000024136
+42,0,11,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1633752000052482
+42,0,11,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.3214522000052966
+42,0,12,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1755137000000104
+42,0,12,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.325889300002018
+42,0,13,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1697171999840065
+42,0,13,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.345103100000415
+42,0,14,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1704100999922957
+42,0,14,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.23280800000066
+42,0,15,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1897792000090703
+42,0,15,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.284660699981032
+42,0,16,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.175618300010683
+42,0,16,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.2857004999823403
+42,0,17,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1604768999968655
+42,0,17,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.23989579998306
+42,0,18,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
+42,0,18,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.279584500007332
+42,0,19,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
+42,0,19,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.2948218999954406
+42,0,20,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
+42,0,20,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.2687513999990188
+42,0,21,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1618860999878961
+42,0,21,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.2253943999821786
+42,0,22,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1612641999963671
+42,0,22,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.312243899999885
+42,0,23,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
+42,0,23,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.1197567000053823
+42,0,24,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.1836570000159554
+42,0,24,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.1427908999903598
+42,0,25,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1630482999898959
+42,0,25,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,2.820096099982038
+42,0,26,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.1593331000185571
+42,0,26,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,2.973355599999195
+42,0,27,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.1700446000031661
+42,0,27,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.129058199992869
+42,0,28,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1882388000085484
+42,0,28,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.0579415999818598
+42,0,29,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.1577627999940887
+42,0,29,29,friday,rolling_replay,updated,released feedback appended to bounded replay history,30,10000,8959,200000,3.041515799995977
+42,0,30,30,friday,latest_batch,updated,latest released batch contains both classes,25,6975,2638,6975,0.1411622999876272
+42,0,30,30,friday,rolling_replay,updated,released feedback appended to bounded replay history,31,6975,2638,200000,3.104697600007057
 42,1,2,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1734845000319183
 42,1,2,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.576012499979697
 42,1,3,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.2011270000366494
 42,1,3,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.7845580999855883
-42,1,4,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.17252469999948516
+42,1,4,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1725246999994851
 42,1,4,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.2466562000336125
 42,1,5,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1742064999998547
 42,1,5,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.441361400007736
 42,1,6,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.172725000011269
-42,1,6,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.5563506999751553
+42,1,6,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.5563506999751557
 42,1,7,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2064694999717176
-42,1,7,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.5766070000245236
+42,1,7,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.576607000024524
 42,1,8,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
 42,1,8,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.47030399995856
 42,1,9,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1654018000117503
 42,1,9,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.58367109997198
-42,1,10,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.17149149999022484
+42,1,10,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1714914999902248
 42,1,10,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.636751100013498
 42,1,11,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
 42,1,11,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.63562080002157
-42,1,12,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.17297959997085854
+42,1,12,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1729795999708585
 42,1,12,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.565323000017088
-42,1,13,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.17618920002132654
+42,1,13,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1761892000213265
 42,1,13,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.620108899951447
-42,1,14,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.18887869996251538
-42,1,14,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.7012409000308253
-42,1,15,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.17246179998619482
+42,1,14,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1888786999625153
+42,1,14,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.701240900030825
+42,1,15,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1724617999861948
 42,1,15,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.5401554999989457
-42,1,16,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.18652780004777014
-42,1,16,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.5283549000159837
-42,1,17,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.18451619998086244
-42,1,17,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.5621182000031695
-42,1,18,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.16473530000075698
+42,1,16,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1865278000477701
+42,1,16,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.528354900015984
+42,1,17,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1845161999808624
+42,1,17,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.562118200003169
+42,1,18,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1647353000007569
 42,1,18,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.5703221999574453
 42,1,19,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 42,1,19,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.6174675000365824
@@ -203,291 +323,351 @@ configuration,label_delay_batches,after_global_batch,source_global_batch,source_
 42,1,20,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.628079699992668
 42,1,21,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
 42,1,21,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.629531799990218
-42,1,22,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.16423360002227128
+42,1,22,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1642336000222712
 42,1,22,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.5498574000084773
-42,1,23,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.17102890001842752
+42,1,23,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1710289000184275
 42,1,23,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.622359100030735
 42,1,24,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
 42,1,24,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.4325834999908693
 42,1,25,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.1958602000377141
 42,1,25,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.4449584999820217
-42,1,26,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.16397970000980422
+42,1,26,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1639797000098042
 42,1,26,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.090229300025385
-42,1,27,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.16460130002815276
+42,1,27,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.1646013000281527
 42,1,27,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,3.2218897999846376
 42,1,28,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.1790717999683693
 42,1,28,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.3439919999800622
-42,1,29,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.19796610000776127
+42,1,29,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1979661000077612
 42,1,29,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.4634513999917544
-42,1,30,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.17020819999743253
+42,1,30,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.1702081999974325
 42,1,30,29,friday,rolling_replay,updated,released feedback appended to bounded replay history,30,10000,8959,200000,3.419874399958644
-42,2,3,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.17218689998844638
+42,2,3,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1721868999884463
 42,2,3,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.570043899992015
-42,2,4,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.20223329996224493
+42,2,4,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.2022332999622449
 42,2,4,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.908017099951394
-42,2,5,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.17406119999941438
+42,2,5,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1740611999994143
 42,2,5,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.2551102999714203
 42,2,6,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.17191749997437
 42,2,6,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.421885400020983
 42,2,7,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1838201000355184
 42,2,7,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.567994399985764
-42,2,8,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.20637969998642802
+42,2,8,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.206379699986428
 42,2,8,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.611696000036318
 42,2,9,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
 42,2,9,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.4678263000096194
-42,2,10,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.17593780002789572
+42,2,10,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1759378000278957
 42,2,10,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.6244682000251487
-42,2,11,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.17429280001670122
-42,2,11,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.6044349999865517
+42,2,11,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1742928000167012
+42,2,11,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.604434999986552
 42,2,12,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
 42,2,12,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.592775300028734
-42,2,13,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.17538989998865873
+42,2,13,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1753898999886587
 42,2,13,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.560162500012666
-42,2,14,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.18912899994757026
+42,2,14,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1891289999475702
 42,2,14,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.594600400014315
-42,2,15,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.17513180000241846
+42,2,15,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1751318000024184
 42,2,15,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.5947111999848858
-42,2,16,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.17852339998353273
+42,2,16,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1785233999835327
 42,2,16,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.486783000000287
-42,2,17,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.18903900001896545
+42,2,17,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1890390000189654
 42,2,17,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.5086653000325896
-42,2,18,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.17600010003661737
+42,2,18,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1760001000366173
 42,2,18,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.5611894000321627
-42,2,19,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.16744270001072437
+42,2,19,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1674427000107243
 42,2,19,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.5558528999681585
 42,2,20,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 42,2,20,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.6918362000142224
 42,2,21,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
-42,2,21,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.7629225000273436
+42,2,21,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.762922500027344
 42,2,22,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
 42,2,22,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.7652565000462346
-42,2,23,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.17901009996421635
+42,2,23,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1790100999642163
 42,2,23,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.7310143999638967
-42,2,24,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.17953760002274066
+42,2,24,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1795376000227406
 42,2,24,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.674511099990923
 42,2,25,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
 42,2,25,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.447035400022287
-42,2,26,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.19159150001360103
+42,2,26,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.191591500013601
 42,2,26,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.3701348999748006
 42,2,27,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1609479000326246
 42,2,27,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.102401199983433
-42,2,28,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.16441879997728392
+42,2,28,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.1644187999772839
 42,2,28,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,3.2456127000041306
-42,2,29,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.18762379995314404
+42,2,29,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.187623799953144
 42,2,29,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.3937388999620453
-42,2,30,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.19755280000390485
+42,2,30,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1975528000039048
 42,2,30,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.367449899960775
-42,5,6,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.18121910002082586
-42,5,6,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.5958990000071935
-42,5,7,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.20254589995602146
+42,5,6,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1812191000208258
+42,5,6,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.595899000007193
+42,5,7,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.2025458999560214
 42,5,7,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.8297076000017114
 42,5,8,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.180638000019826
 42,5,8,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.2731727000209503
-42,5,9,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.17710820003412664
+42,5,9,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1771082000341266
 42,5,9,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.53305879997788
 42,5,10,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1933349000173621
 42,5,10,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.7191647000145167
-42,5,11,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.20240449998527765
+42,5,11,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2024044999852776
 42,5,11,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.655696399975568
 42,5,12,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
 42,5,12,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.5234586000442505
-42,5,13,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.17704809998394921
+42,5,13,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1770480999839492
 42,5,13,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.6335855000070296
 42,5,14,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1799907999811694
 42,5,14,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.683058099995833
 42,5,15,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
-42,5,15,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.7383582000038587
-42,5,16,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.17771519999951124
+42,5,15,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.738358200003858
+42,5,16,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1777151999995112
 42,5,16,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.6717190999770537
-42,5,17,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.19193999998969957
+42,5,17,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1919399999896995
 42,5,17,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.654047299991362
-42,5,18,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.18560249998699874
+42,5,18,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1856024999869987
 42,5,18,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.670847399975173
 42,5,19,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.2127111999434419
 42,5,19,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.554375700012315
-42,5,20,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.18954190000658855
+42,5,20,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1895419000065885
 42,5,20,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.5823297000024468
-42,5,21,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.18925039999885485
-42,5,21,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.6449512999970466
-42,5,22,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.17826830002013594
+42,5,21,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1892503999988548
+42,5,21,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.644951299997047
+42,5,22,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1782683000201359
 42,5,22,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.613389800011646
 42,5,23,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 42,5,23,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.670909299980849
 42,5,24,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 42,5,24,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.6954712999868207
 42,5,25,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
-42,5,25,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.7258317000232637
+42,5,25,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.725831700023264
 42,5,26,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1811625999980606
 42,5,26,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.606818199972622
 42,5,27,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1683206000016071
-42,5,27,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.6712372000329196
+42,5,27,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.67123720003292
 42,5,28,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
 42,5,28,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.421577300003264
-42,5,29,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.21247749996837229
+42,5,29,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.2124774999683722
 42,5,29,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.373900600010529
-42,5,30,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.16192520002368838
+42,5,30,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1619252000236883
 42,5,30,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.164383600000292
-73,1,2,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.18127160001313314
-73,1,2,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.6778993000043556
-73,1,3,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.19814470002893358
-73,1,3,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.8603154000011273
-73,1,4,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.18816269998205826
+73,0,1,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1608434999943711
+73,0,1,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.370757299999241
+73,0,2,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.1860445000056643
+73,0,2,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.514329199999338
+73,0,3,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.16800079998211
+73,0,3,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.0500531000143383
+73,0,4,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1705898000218439
+73,0,4,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.1618205000122543
+73,0,5,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1696684999915305
+73,0,5,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.2886087000078987
+73,0,6,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2048170999914873
+73,0,6,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.3025524000113364
+73,0,7,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
+73,0,7,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.3046808000071906
+73,0,8,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1637741999875288
+73,0,8,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.396957000019029
+73,0,9,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1624923000053968
+73,0,9,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.333145600015996
+73,0,10,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
+73,0,10,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.337713699991582
+73,0,11,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1585658999974839
+73,0,11,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.38445209999918
+73,0,12,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1740112999978009
+73,0,12,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.3875295000034384
+73,0,13,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1610136999806855
+73,0,13,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.2754969999950845
+73,0,14,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1718022000277415
+73,0,14,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.2342212999938056
+73,0,15,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1737761999829672
+73,0,15,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.2374477999983355
+73,0,16,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1747639000241179
+73,0,16,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.3073832000081893
+73,0,17,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1606024999928195
+73,0,17,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.2549974000139628
+73,0,18,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
+73,0,18,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.408524500002386
+73,0,19,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
+73,0,19,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.336015500011854
+73,0,20,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
+73,0,20,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.407808399992064
+73,0,21,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1609858000010717
+73,0,21,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.341790700011188
+73,0,22,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.173337399988668
+73,0,22,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.388292700023157
+73,0,23,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
+73,0,23,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.1870376000006218
+73,0,24,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.1751664000039454
+73,0,24,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.026357599999756
+73,0,25,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1577403000264894
+73,0,25,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,2.7618836000037845
+73,0,26,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.1580715000163763
+73,0,26,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,2.9400874999992084
+73,0,27,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.1757303999911528
+73,0,27,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.005311599990818
+73,0,28,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1827895999886095
+73,0,28,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.078314800019143
+73,0,29,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.1730595999979414
+73,0,29,29,friday,rolling_replay,updated,released feedback appended to bounded replay history,30,10000,8959,200000,2.958569300011732
+73,0,30,30,friday,latest_batch,updated,latest released batch contains both classes,25,6975,2638,6975,0.1491390000155661
+73,0,30,30,friday,rolling_replay,updated,released feedback appended to bounded replay history,31,6975,2638,200000,3.04371299999184
+73,1,2,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1812716000131331
+73,1,2,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.677899300004356
+73,1,3,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.1981447000289335
+73,1,3,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.8603154000011277
+73,1,4,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1881626999820582
 73,1,4,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.3951473999768496
-73,1,5,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.17985209997277707
+73,1,5,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.179852099972777
 73,1,5,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.5505073000094853
-73,1,6,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.18468499998562038
+73,1,6,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1846849999856203
 73,1,6,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.5927616999833845
 73,1,7,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2174768000259064
 73,1,7,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.6626634999993257
 73,1,8,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
 73,1,8,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.6222891000215895
-73,1,9,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.17333220003638417
-73,1,9,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.8195625000516884
-73,1,10,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.16712499997811392
+73,1,9,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1733322000363841
+73,1,9,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.819562500051688
+73,1,10,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1671249999781139
 73,1,10,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.709062099980656
 73,1,11,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
 73,1,11,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.6942348000011407
 73,1,12,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1752070999937132
-73,1,12,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.7632606999832205
-73,1,13,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.18858729995554313
+73,1,12,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.763260699983221
+73,1,13,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1885872999555431
 73,1,13,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.768548399966676
-73,1,14,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.18337480002082884
-73,1,14,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.6332041999557987
-73,1,15,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.18357010005274788
+73,1,14,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1833748000208288
+73,1,14,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.633204199955799
+73,1,15,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1835701000527478
 73,1,15,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.628723700006958
-73,1,16,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.18790580000495538
+73,1,16,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1879058000049553
 73,1,16,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.5859741999884136
-73,1,17,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.19295280001824722
-73,1,17,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.6782303999643773
+73,1,17,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1929528000182472
+73,1,17,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.678230399964377
 73,1,18,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.177213600021787
 73,1,18,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.627617400023155
 73,1,19,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
-73,1,19,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.7480073999613523
+73,1,19,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.748007399961352
 73,1,20,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 73,1,20,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.651698599976953
 73,1,21,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
-73,1,21,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.7557520999689586
-73,1,22,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.17791470000520349
+73,1,21,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.755752099968959
+73,1,22,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1779147000052034
 73,1,22,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.733929500041995
 73,1,23,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1896728000137955
 73,1,23,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.749931199999992
 73,1,24,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
 73,1,24,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.535148999944795
-73,1,25,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.19241999997757375
-73,1,25,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.3569138000020757
-73,1,26,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.16299489996163175
-73,1,26,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.0547534999786876
-73,1,27,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.16376169997965917
-73,1,27,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,3.2297580000013113
-73,1,28,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.18699469999410212
+73,1,25,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.1924199999775737
+73,1,25,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.356913800002076
+73,1,26,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1629948999616317
+73,1,26,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.054753499978688
+73,1,27,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.1637616999796591
+73,1,27,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,3.2297580000013117
+73,1,28,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.1869946999941021
 73,1,28,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.313977400015574
-73,1,29,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.18830490001710132
+73,1,29,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1883049000171013
 73,1,29,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.367823100008536
-73,1,30,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.17345709999790415
-73,1,30,29,friday,rolling_replay,updated,released feedback appended to bounded replay history,30,10000,8959,200000,3.2608768999925815
-73,2,3,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.17726000002585351
+73,1,30,29,friday,latest_batch,updated,latest released batch contains both classes,24,10000,8959,10000,0.1734570999979041
+73,1,30,29,friday,rolling_replay,updated,released feedback appended to bounded replay history,30,10000,8959,200000,3.260876899992581
+73,2,3,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1772600000258535
 73,2,3,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.633227500016801
-73,2,4,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.20199339999817312
-73,2,4,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.7683993000537157
+73,2,4,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.2019933999981731
+73,2,4,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.768399300053716
 73,2,5,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1917632999829948
 73,2,5,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.331811200012453
-73,2,6,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.18753619998460636
+73,2,6,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1875361999846063
 73,2,6,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.4887030000099912
-73,2,7,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.19097110000438988
+73,2,7,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1909711000043898
 73,2,7,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.6058829000103287
-73,2,8,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.22002080001402646
-73,2,8,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.6795696999761276
+73,2,8,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2200208000140264
+73,2,8,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.679569699976128
 73,2,9,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
 73,2,9,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.631068699993193
-73,2,10,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.16890669998247176
+73,2,10,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1689066999824717
 73,2,10,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.75911049998831
-73,2,11,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.17576130002271384
+73,2,11,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1757613000227138
 73,2,11,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.7050727999885567
 73,2,12,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
 73,2,12,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.732375800027512
-73,2,13,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.17927720001898706
+73,2,13,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.179277200018987
 73,2,13,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.7347505999496207
 73,2,14,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1899932000087574
 73,2,14,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.7181163000059314
-73,2,15,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.17833369999425486
+73,2,15,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1783336999942548
 73,2,15,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.633324399997946
-73,2,16,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.17674789996817708
+73,2,16,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.176747899968177
 73,2,16,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.5661639000172727
 73,2,17,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1869056000141427
 73,2,17,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.589462800009642
-73,2,18,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.18574159999843687
+73,2,18,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1857415999984368
 73,2,18,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.704124399984721
-73,2,19,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.18054740002844483
-73,2,19,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.6278992000152357
+73,2,19,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1805474000284448
+73,2,19,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.627899200015236
 73,2,20,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
-73,2,20,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.8289809999987483
+73,2,20,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.828980999998748
 73,2,21,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 73,2,21,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.641838400042616
 73,2,22,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
-73,2,22,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.6247924999915995
+73,2,22,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.6247924999916
 73,2,23,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1691075999988243
 73,2,23,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.7145936000160873
-73,2,24,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.20400940004037693
+73,2,24,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.2040094000403769
 73,2,24,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.748413800029084
 73,2,25,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
-73,2,25,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.5643791999900714
-73,2,26,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.20054490002803504
-73,2,26,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.3669972000061534
-73,2,27,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.16576579998945817
+73,2,25,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.564379199990072
+73,2,26,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.200544900028035
+73,2,26,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.366997200006153
+73,2,27,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.1657657999894581
 73,2,27,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.109832699992694
-73,2,28,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.17591789999278262
+73,2,28,26,friday,latest_batch,updated,latest released batch contains both classes,21,10000,9867,10000,0.1759178999927826
 73,2,28,26,friday,rolling_replay,updated,released feedback appended to bounded replay history,27,10000,9867,200000,3.3242784999893047
-73,2,29,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.18688390002353117
+73,2,29,27,friday,latest_batch,updated,latest released batch contains both classes,22,10000,6135,10000,0.1868839000235311
 73,2,29,27,friday,rolling_replay,updated,released feedback appended to bounded replay history,28,10000,6135,200000,3.3530413000262342
-73,2,30,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.18840530002489686
+73,2,30,28,friday,latest_batch,updated,latest released batch contains both classes,23,10000,5394,10000,0.1884053000248968
 73,2,30,28,friday,rolling_replay,updated,released feedback appended to bounded replay history,29,10000,5394,200000,3.402765900013037
-73,5,6,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.18181889998959377
+73,5,6,1,wednesday,latest_batch,updated,latest released batch contains both classes,2,10000,411,10000,0.1818188999895937
 73,5,6,1,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,2,10000,411,200000,2.580270799982827
 73,5,7,2,wednesday,latest_batch,updated,latest released batch contains both classes,3,10000,2259,10000,0.2124127999995835
 73,5,7,2,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,3,10000,2259,200000,2.8058653000043705
 73,5,8,3,wednesday,latest_batch,updated,latest released batch contains both classes,4,10000,9481,10000,0.1847991999820806
 73,5,8,3,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,4,10000,9481,200000,3.3282649000175297
-73,5,9,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.18058269994799048
+73,5,9,4,wednesday,latest_batch,updated,latest released batch contains both classes,5,10000,9286,10000,0.1805826999479904
 73,5,9,4,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,5,10000,9286,200000,3.5233802999719046
 73,5,10,5,wednesday,latest_batch,updated,latest released batch contains both classes,6,10000,9114,10000,0.1764846000005491
-73,5,10,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.6355040000053123
+73,5,10,5,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,6,10000,9114,200000,3.635504000005312
 73,5,11,6,wednesday,latest_batch,updated,latest released batch contains both classes,7,10000,3348,10000,0.2090165000408888
 73,5,11,6,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,7,10000,3348,200000,3.66325769998366
 73,5,12,7,wednesday,latest_batch,skipped,latest released batch has only one class,7,10000,0,0,0.0
-73,5,12,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.6190383000066504
-73,5,13,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.17997870000544935
+73,5,12,7,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,8,10000,0,200000,3.6190383000066495
+73,5,13,8,wednesday,latest_batch,updated,latest released batch contains both classes,8,10000,1,10000,0.1799787000054493
 73,5,13,8,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,9,10000,1,200000,3.8249738999875262
-73,5,14,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.18309009994845837
+73,5,14,9,wednesday,latest_batch,updated,latest released batch contains both classes,9,10000,2,10000,0.1830900999484583
 73,5,14,9,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,10,10000,2,200000,3.7082232999964617
 73,5,15,10,wednesday,latest_batch,skipped,latest released batch has only one class,9,7304,0,0,0.0
-73,5,15,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.6898670999798924
-73,5,16,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.17888229998061433
+73,5,15,10,wednesday,rolling_replay,updated,released feedback appended to bounded replay history,11,7304,0,200000,3.689867099979893
+73,5,16,11,thursday,latest_batch,updated,latest released batch contains both classes,10,10000,3,10000,0.1788822999806143
 73,5,16,11,thursday,rolling_replay,updated,released feedback appended to bounded replay history,12,10000,3,200000,3.7165253999992274
-73,5,17,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.19096180004999042
+73,5,17,12,thursday,latest_batch,updated,latest released batch contains both classes,11,10000,246,10000,0.1909618000499904
 73,5,17,12,thursday,rolling_replay,updated,released feedback appended to bounded replay history,13,10000,246,200000,3.6955340999993496
 73,5,18,13,thursday,latest_batch,updated,latest released batch contains both classes,12,10000,305,10000,0.1898265000199899
 73,5,18,13,thursday,rolling_replay,updated,released feedback appended to bounded replay history,14,10000,305,200000,3.6334690999938175
 73,5,19,14,thursday,latest_batch,updated,latest released batch contains both classes,13,10000,357,10000,0.1899210999836214
 73,5,19,14,thursday,rolling_replay,updated,released feedback appended to bounded replay history,15,10000,357,200000,3.621280100021977
-73,5,20,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.19177649996709079
-73,5,20,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.7531229000305757
+73,5,20,15,thursday,latest_batch,updated,latest released batch contains both classes,14,10000,193,10000,0.1917764999670907
+73,5,20,15,thursday,rolling_replay,updated,released feedback appended to bounded replay history,16,10000,193,200000,3.753122900030576
 73,5,21,16,thursday,latest_batch,updated,latest released batch contains both classes,15,10000,335,10000,0.1869981000199914
 73,5,21,16,thursday,rolling_replay,updated,released feedback appended to bounded replay history,17,10000,335,200000,3.6613550999900326
-73,5,22,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.17859929997939616
-73,5,22,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.6492698999936692
+73,5,22,17,thursday,latest_batch,updated,latest released batch contains both classes,16,10000,5,10000,0.1785992999793961
+73,5,22,17,thursday,rolling_replay,updated,released feedback appended to bounded replay history,18,10000,5,200000,3.649269899993669
 73,5,23,18,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
-73,5,23,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.7338386999908835
+73,5,23,18,thursday,rolling_replay,updated,released feedback appended to bounded replay history,19,10000,0,200000,3.733838699990884
 73,5,24,19,thursday,latest_batch,skipped,latest released batch has only one class,16,10000,0,0,0.0
 73,5,24,19,thursday,rolling_replay,updated,released feedback appended to bounded replay history,20,10000,0,200000,3.6998233000049368
 73,5,25,20,thursday,latest_batch,skipped,latest released batch has only one class,16,8640,0,0,0.0
 73,5,25,20,thursday,rolling_replay,updated,released feedback appended to bounded replay history,21,8640,0,200000,3.6511513999430463
-73,5,26,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.16874450002796948
-73,5,26,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.7212844000314362
-73,5,27,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.17980250000255182
-73,5,27,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.7581135000218637
+73,5,26,21,friday,latest_batch,updated,latest released batch contains both classes,17,10000,5,10000,0.1687445000279694
+73,5,26,21,friday,rolling_replay,updated,released feedback appended to bounded replay history,22,10000,5,200000,3.721284400031436
+73,5,27,22,friday,latest_batch,updated,latest released batch contains both classes,18,10000,95,10000,0.1798025000025518
+73,5,27,22,friday,rolling_replay,updated,released feedback appended to bounded replay history,23,10000,95,200000,3.758113500021864
 73,5,28,23,friday,latest_batch,skipped,latest released batch has only one class,18,10000,0,0,0.0
 73,5,28,23,friday,rolling_replay,updated,released feedback appended to bounded replay history,24,10000,0,200000,3.534065500018187
 73,5,29,24,friday,latest_batch,updated,latest released batch contains both classes,19,10000,2351,10000,0.2018139999709092
 73,5,29,24,friday,rolling_replay,updated,released feedback appended to bounded replay history,25,10000,2351,200000,3.333092199987732
-73,5,30,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.17520639998838305
-73,5,30,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.0680554000427946
+73,5,30,25,friday,latest_batch,updated,latest released batch contains both classes,20,10000,9769,10000,0.175206399988383
+73,5,30,25,friday,rolling_replay,updated,released feedback appended to bounded replay history,26,10000,9769,200000,3.068055400042794

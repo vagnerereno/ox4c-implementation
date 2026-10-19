@@ -32,11 +32,11 @@ FAMILY_LABELS = {
 def configure_style() -> None:
     plt.rcParams.update({
         "font.family": "DejaVu Sans",
-        "font.size": 18,
-        "axes.labelsize": 18,
-        "xtick.labelsize": 16,
-        "ytick.labelsize": 16,
-        "legend.fontsize": 16,
+        "font.size": 20,
+        "axes.labelsize": 22,
+        "xtick.labelsize": 19,
+        "ytick.labelsize": 19,
+        "legend.fontsize": 18,
         "axes.linewidth": 1.1,
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
@@ -55,10 +55,10 @@ def add_policy_curves(ax, frame: pd.DataFrame, metric: str) -> None:
         data = grouped.loc[grouped["policy"].eq(policy)].sort_values("label_delay_batches")
         ax.errorbar(
             data["label_delay_batches"], data["mean"], yerr=data["std"],
-            color=COLORS[policy], label=LABELS[policy], marker="o", markersize=8,
-            linewidth=2.8, capsize=5,
+            color=COLORS[policy], label=LABELS[policy], marker="o", markersize=9,
+            linewidth=3.1, capsize=5.5,
         )
-    ax.set_xticks([1, 2, 5])
+    ax.set_xticks([0, 1, 2, 5])
     ax.set_xlabel("Label delay (batches)")
     ax.grid(alpha=0.25)
     ax.spines[["top", "right"]].set_visible(False)
@@ -68,7 +68,7 @@ def plot_online_metric(aggregate: pd.DataFrame, metric: str, output_dir: Path, s
     fig, ax = plt.subplots(figsize=(5.2, 4.2))
     add_policy_curves(ax, aggregate, metric)
     ax.set_ylabel(metric.upper())
-    ax.set_ylim(-0.03, 0.84 if metric == "f1" else 0.80)
+    ax.set_ylim(-0.03, 1.02)
     fig.subplots_adjust(left=0.18, right=0.98, top=0.96, bottom=0.20)
     save_panel(fig, output_dir, stem)
 
@@ -77,9 +77,9 @@ def plot_retention(retention: pd.DataFrame, output_dir: Path) -> None:
     final_retention = retention.loc[retention["stage_day"].eq("friday")]
     fig, ax = plt.subplots(figsize=(5.2, 4.2))
     add_policy_curves(ax, final_retention, "macro_attack_recall")
-    ax.set_ylabel("Friday macro attack recall")
+    ax.set_ylabel("Friday macro recall")
     ax.set_ylim(0, 0.72)
-    fig.subplots_adjust(left=0.23, right=0.98, top=0.96, bottom=0.20)
+    fig.subplots_adjust(left=0.21, right=0.98, top=0.96, bottom=0.20)
     save_panel(fig, output_dir, "fig_lycos_c_retention")
 
 
@@ -93,7 +93,9 @@ def plot_family_heatmap(family: pd.DataFrame, output_dir: Path) -> None:
     fig, ax = plt.subplots(figsize=(10.8, 5.4))
     image = ax.imshow(matrix.to_numpy(), aspect="auto", cmap="viridis", vmin=0, vmax=1)
     delay_labels = [
-        f"{int(value)} batch" if value == 1 else f"{int(value)} batches"
+        "Immediate (0)" if value == 0 else
+        f"{int(value)} batch" if value == 1 else
+        f"{int(value)} batches"
         for value in matrix.columns
     ]
     ax.set_xticks(np.arange(len(matrix.columns)), delay_labels)
@@ -116,14 +118,28 @@ def main() -> None:
         "--data-dir", type=Path, default=default_root / "results" / "lycos_ids2017",
     )
     parser.add_argument(
+        "--additional-data-dir", type=Path, action="append", default=[],
+        help="additional result directory to merge, such as a zero-delay run",
+    )
+    parser.add_argument(
         "--output-dir", type=Path, default=default_root / "figures" / "output",
     )
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    aggregate = pd.read_csv(args.data_dir / "aggregate_results.csv")
-    retention = pd.read_csv(args.data_dir / "retention_results.csv")
-    family = pd.read_csv(args.data_dir / "retention_by_family.csv")
+    data_dirs = [args.data_dir, *args.additional_data_dir]
+    aggregate = pd.concat(
+        [pd.read_csv(path / "aggregate_results.csv") for path in data_dirs],
+        ignore_index=True,
+    )
+    retention = pd.concat(
+        [pd.read_csv(path / "retention_results.csv") for path in data_dirs],
+        ignore_index=True,
+    )
+    family = pd.concat(
+        [pd.read_csv(path / "retention_by_family.csv") for path in data_dirs],
+        ignore_index=True,
+    )
 
     configure_style()
     plot_online_metric(aggregate, "f1", args.output_dir, "fig_lycos_a_f1")

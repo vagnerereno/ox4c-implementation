@@ -1,5 +1,5 @@
 {
-  "protocol": "qut-ox4c-nontemporal-confirmatory-v1",
+  "protocol": "qut-ox4c-nontemporal-confirmatory-v2",
   "created_at": 1791755417.6447651,
   "dataset": "QUT-DV25 software supply-chain attack detection",
   "data_path": "data/qut_dv25/QUT-DV25.csv",
@@ -13,6 +13,7 @@
   "profiles": [
     "baseline",
     "optimized",
+    "collaboration_only",
     "collaborative",
     "complete"
   ],
@@ -25,6 +26,11 @@
     "optimized": {
       "optimization": true,
       "collaboration": false,
+      "evidence": false
+    },
+    "collaboration_only": {
+      "optimization": false,
+      "collaboration": true,
       "evidence": false
     },
     "collaborative": {

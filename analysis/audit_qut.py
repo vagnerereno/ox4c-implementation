@@ -11,7 +11,13 @@ from pathlib import Path
 import pandas as pd
 
 
-PROFILES = ("baseline", "optimized", "collaborative", "complete")
+PROFILES = (
+    "baseline",
+    "optimized",
+    "collaboration_only",
+    "collaborative",
+    "complete",
+)
 ROOT = Path(__file__).resolve().parents[1]
 
 

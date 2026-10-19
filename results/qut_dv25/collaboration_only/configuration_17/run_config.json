@@ -1,0 +1,83 @@
+{
+  "optimization": {
+    "algorithm": "none",
+    "preset": "fast",
+    "min_features": 3,
+    "max_features": 30,
+    "constructive_iterations": null,
+    "local_iterations": null,
+    "priority_queue_size": null,
+    "rcl_size": null,
+    "alpha": 0.7,
+    "update_interval": 10,
+    "ranking_method": "mutual_info",
+    "validation_fraction": null,
+    "cv": null,
+    "max_evaluations": 30,
+    "early_stopping_rounds": null,
+    "time_budget": 180.0,
+    "evaluation_sample_size": 5000,
+    "max_validation_mcc_loss": 0.02,
+    "min_feature_reduction_fraction": 0.25
+  },
+  "collaboration": {
+    "enabled": true,
+    "primary_algorithm": "random_forest",
+    "counselor_algorithms": [
+      "hist_gradient_boosting",
+      "compact_tree"
+    ],
+    "consensus": "calibration_selected_vote",
+    "minimum_calibration_mcc_gain": 0.0
+  },
+  "learning": {
+    "enabled": false,
+    "feedback_delay_events": 50,
+    "batch_size": 200,
+    "max_promotions": 10
+  },
+  "explainability": {
+    "enabled": false,
+    "policy": "alerts_and_collaborative",
+    "top_k": 10
+  },
+  "compliance": {
+    "enabled": false,
+    "enforce": true,
+    "policy_id": "ox4c-technical-conformance-v1",
+    "required_provenance_fields": [
+      "source_file",
+      "sha256",
+      "target",
+      "split_policy",
+      "split_sizes"
+    ],
+    "require_model_version_evidence": true,
+    "require_audit_record": true,
+    "require_explanation_capability": true,
+    "feature_allowlist": [],
+    "feature_denylist": []
+  },
+  "compact_model": {
+    "enabled": false,
+    "algorithm": "compact_tree",
+    "benchmark_samples": 512
+  },
+  "model": {
+    "algorithm": "random_forest",
+    "n_estimators": 160,
+    "min_samples_leaf": 2,
+    "class_weight": "balanced",
+    "random_state": 17,
+    "inference_jobs": 1,
+    "hgb_max_iter": 160,
+    "hgb_learning_rate": 0.08,
+    "hgb_max_leaf_nodes": 31,
+    "hgb_l2_regularization": 1.0,
+    "logistic_max_iter": 1000,
+    "compact_max_depth": 10,
+    "extra_trees_estimators": 200,
+    "attack_sensitive_weight": 2.0
+  },
+  "output_dir": "artifacts/qut_dv25\\collaboration_only\\configuration_17"
+}

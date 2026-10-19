@@ -1,0 +1,116 @@
+{
+  "primary_classifier": "random_forest",
+  "classifiers": [
+    "random_forest",
+    "hist_gradient_boosting",
+    "compact_tree"
+  ],
+  "consensus": "calibration_selected_vote",
+  "competence": {
+    "random_forest": {
+      "classifier": "random_forest",
+      "global_mcc": 0.9663409461171532,
+      "predictive_value": {
+        "0": 0.9822926374650512,
+        "1": 0.9840525328330206
+      },
+      "class_recall": {
+        "0": 0.9841269841269841,
+        "1": 0.9822097378277154
+      }
+    },
+    "hist_gradient_boosting": {
+      "classifier": "hist_gradient_boosting",
+      "global_mcc": 0.9747887268311658,
+      "predictive_value": {
+        "0": 0.9833333333333333,
+        "1": 0.9915014164305949
+      },
+      "class_recall": {
+        "0": 0.9915966386554622,
+        "1": 0.9831460674157303
+      }
+    },
+    "compact_tree": {
+      "classifier": "compact_tree",
+      "global_mcc": 0.9177197870737248,
+      "predictive_value": {
+        "0": 0.9580615097856477,
+        "1": 0.9596622889305816
+      },
+      "class_recall": {
+        "0": 0.9598506069094305,
+        "1": 0.9578651685393258
+      }
+    }
+  },
+  "conflict_rule": "request counsel when predicted labels disagree",
+  "resolution_rule": "calibration-selected minimum attack votes; select the most reliable voter for the consensus label",
+  "activation": {
+    "rule": "select the voting rule on calibration MCC and authorize it only when calibration MCC improves",
+    "reliability_definition": "P(true label = c | classifier predicts c)",
+    "consensus": "calibration_selected_vote",
+    "vote_candidates": [
+      {
+        "minimum_attack_votes": 1,
+        "mcc": 0.9492078778741505,
+        "f1": 0.9747126436781609,
+        "recall": 0.9925093632958801,
+        "tn": 1024,
+        "fp": 47,
+        "fn": 8,
+        "tp": 1060
+      },
+      {
+        "minimum_attack_votes": 2,
+        "mcc": 0.9691480907681331,
+        "f1": 0.9845288326300985,
+        "recall": 0.9831460674157303,
+        "tn": 1056,
+        "fp": 15,
+        "fn": 18,
+        "tp": 1050
+      },
+      {
+        "minimum_attack_votes": 3,
+        "mcc": 0.9420794720812564,
+        "f1": 0.9698131288931481,
+        "recall": 0.947565543071161,
+        "tn": 1064,
+        "fp": 7,
+        "fn": 56,
+        "tp": 1012
+      }
+    ],
+    "selected_minimum_attack_votes": 2,
+    "primary_metrics": {
+      "mcc": 0.9663409461171532,
+      "f1": 0.9831302717900656,
+      "recall": 0.9822097378277154,
+      "tn": 1054,
+      "fp": 17,
+      "fn": 19,
+      "tp": 1049
+    },
+    "resolved_metrics": {
+      "mcc": 0.9691480907681331,
+      "f1": 0.9845288326300985,
+      "recall": 0.9831460674157303,
+      "tn": 1056,
+      "fp": 15,
+      "fn": 18,
+      "tp": 1050
+    },
+    "primary_mcc": 0.9663409461171532,
+    "resolved_mcc": 0.9691480907681331,
+    "mcc_gain": 0.002807144650979976,
+    "minimum_mcc_gain": 0.0,
+    "observed_conflicts": 88,
+    "primary_negative_conflicts": 41,
+    "primary_positive_conflicts": 47,
+    "primary_false_negatives_with_conflict": 11,
+    "primary_false_positives_with_conflict": 10,
+    "changed_decisions": 11,
+    "authorized": true
+  }
+}

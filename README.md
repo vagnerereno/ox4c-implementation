@@ -68,31 +68,33 @@ python analysis/analyze_qut.py --input artifacts/qut_dv25
 python analysis/audit_qut.py --input artifacts/qut_dv25
 ```
 
-The runner evaluates baseline, optimized, collaborative, and complete profiles under grouped configurations 17, 42, and 73. The frozen feature-selection artifacts preserve the reported robust A-GRASPQ-FS searches and their search costs.
+The runner evaluates baseline, optimization-only, collaboration-only, optimization-plus-collaboration, and complete profiles under grouped configurations 17, 42, and 73. The frozen feature-selection artifacts preserve the reported A-GRASPQ-FS searches and their search costs.
 
 ### LYCOS-IDS2017
 
 ```powershell
 python experiments/run_lycos_continual.py `
   --data-root data/lycos_ids2017 `
-  --output artifacts/lycos_ids2017
+  --output artifacts/lycos_ids2017 `
+  --label-delays 0 1 2 5
 
 python analysis/audit_lycos.py --input artifacts/lycos_ids2017
 ```
 
-The runner uses Monday and Tuesday for initial fitting and processes Wednesday through Friday in chronological, predict-before-update batches. Frozen, latest-batch, and rolling-replay policies are evaluated with trusted-label delays of one, two, and five batches.
+The runner uses Monday and Tuesday for initial fitting and processes Wednesday through Friday in chronological, predict-before-update batches. Frozen, latest-batch, and rolling-replay policies are evaluated with immediate post-prediction feedback and trusted-label delays of one, two, and five batches.
 
 ## Released results
 
-`results/qut_dv25/` contains per-event decisions, full-vector explanation records, feature-selection metadata, classifier competence, technical-policy outcomes, computational measurements, consolidated tables, and the integrity report. Across the three grouped configurations, the baseline and collaborative profiles obtain mean MCC values of 0.9651 and 0.9760, respectively; 28 of 32 changed conflict decisions are corrections.
+`results/qut_dv25/` contains per-event decisions, full-vector explanation records, feature-selection metadata, classifier competence, technical-policy outcomes, computational measurements, consolidated tables, and the integrity report. Across the three grouped configurations, the baseline, collaboration-only, and optimization-plus-collaboration profiles obtain mean MCC values of 0.9651, 0.9723, and 0.9760, respectively. In the combined profile, 28 of 32 changed conflict decisions are corrections.
 
-`results/lycos_ids2017/` contains batch, update, retention, attack-family, protocol, and integrity records. With one-batch label delay, rolling replay obtains mean online F1 of 0.7829 across the three algorithmic configurations.
+`results/lycos_ids2017/` contains batch, update, retention, attack-family, protocol, and integrity records. Rolling replay obtains mean online F1 of 0.9652 with immediate post-prediction feedback and 0.7829 with one complete batch of delay.
 
 ## Figures
 
 ```powershell
 python figures/scripts/fig_qut_component_effects.py
 python figures/scripts/fig_qut_evidence_cost.py
+python figures/scripts/fig_qut_local_explanations.py
 python figures/scripts/fig_lycos_continual_learning.py
 ```
 
